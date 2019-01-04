@@ -1,0 +1,105 @@
+.bg {
+    background-image: url('https://tp.datikeji.com/a/15458170644010/S6FRZAPwW2gIWLEdAVYQhUKJivaVpqhi5dbMWt0F.png');
+}
+
+.cardBody {
+    width: 662rpx;
+    height: 974rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: -4rpx 9rpx 20rpx 0px rgba(217, 128, 0, 0.32);
+    border-radius: 32rpx;
+    margin: 40rpx auto 0;
+}
+
+.iconAndTitle {
+    width: 100%;
+    height: 108rpx;
+    padding: 0 40rpx;
+    margin: 30rpx auto 0;
+    text-align: left;
+}
+
+.avatarUrl{
+	display: inline-block;
+	width: 108rpx;
+    height: 108rpx;
+    border-radius: 50%;
+    border: 4rpx solid #fff;
+    box-sizing: border-box;
+    box-shadow: 0px 2rpx 4rpx 0px rgba(114, 65, 0, 0.22);
+    margin-right: 20rpx;
+    vertical-align: middle;
+    font-size: 34rpx;
+    font-weight: bold;
+}
+
+.iconAndTitle image {
+    width: 108rpx;
+    height: 108rpx;
+    border-radius: 50%;
+}
+
+.temaIcon {
+    margin: 28rpx auto 0;
+}
+
+.temaIcon, .temaIcon image {
+    width: 582rpx;
+    height: 290rpx;
+    border-radius: 8rpx;
+}
+
+.cardTitle {
+    width: 558rpx;
+    height: 96rpx;
+    font-size: 32rpx;
+    color: rgba(51, 51, 51, 1);
+    margin: 20rpx auto 0;
+    line-height: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: left;
+}
+
+.cardTitleTxt {
+    color: #ffc16f;
+    font-size: 38rpx;
+    margin-right: 20rpx;
+    font-weight: bold;
+}
+
+.qrCodeBox, .qrCodeBox image {
+    width: 280rpx;
+    height: 280rpx;
+}
+
+.qrCodeBox {
+    width: 280rpx;
+    height: 280rpx;
+    background: rgba(255, 255, 255, 1);
+    border: 2rpx solid rgba(232, 232, 232, 1);
+    border-radius: 140rpx;
+    margin: 28rpx auto 0;
+}
+
+.longClickTxt {
+    text-align: center;
+    font-size: 28rpx;
+    color: #9d9d9d;
+    margin-top: 14rpx;
+}
+
+.savePic {
+    width: 662rpx;
+    height: 108rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: -4rpx 9rpx 20rpx 0px rgba(217, 128, 0, 0.32);
+    border-radius: 54rpx;
+	margin: 40rpx auto 0;
+	color: #FFB554;
+	line-height: 108rpx;
+	text-align: center;
+}

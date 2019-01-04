@@ -1,0 +1,33 @@
+<view class="bg">
+
+    <view class='cardBody normalView'>
+
+        <view class='iconAndTitle normalView'>
+            <view class='avatarUrl'>
+                <image src='{{avatarUrl}}' />
+            </view>
+
+            <text>{{name}}发起了一个活动</text>
+        </view>
+
+        <view class='temaIcon'>
+            <image src='{{temaIcon}}' />
+        </view>
+
+        <view class='cardTitle'>
+            <text class='cardTitleTxt'>[活动主题]</text>
+            <text>{{title}}</text>
+        </view>
+
+        <view class='qrCodeBox'>
+            <image src='{{qrIcon}}' />
+        </view>
+
+        <view class='longClickTxt'>长按识别小程序，参与活动</view>
+
+    </view>
+
+    <view class='savePic' bindtap='drawcanvs'>保存到手机</view>
+
+</view>
+<canvas canvas-id="canvas" style="width:{{bgimgW}}px;height:{{bgimgH}}px;display:block;position:absolute; bottom:1500px" />

@@ -1,0 +1,86 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wxa9096f1da50aa304",
+	"projectname": "dazhuanpan",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/userCenter/userCenter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "来抽签",
+					"pathName": "pages/randomDraw/randomDraw",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "翻卡片",
+					"pathName": "pages/overTheCard/overTheCard",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "抽签记录",
+					"pathName": "pages/drawRecord/drawRecord",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "海报",
+					"pathName": "pages/nowActive/nowActive",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的二维码",
+					"pathName": "pages/myQrCode/myQrCode",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "骰子",
+					"pathName": "pages/RollTheDice/RollTheDice",
+					"query": ""
+				}
+			]
+		}
+	}
+}

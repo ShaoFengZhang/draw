@@ -1,0 +1,56 @@
+<view class="bg">
+
+    <view class='cardBody'>
+
+        <view class='cardTitle'>
+            <text class='cardTitleTxt'>[ 主题 ]</text>
+            <text>{{title}}</text>
+        </view>
+
+        <view class='cardPlate {{ani}}' bindtap='drawClickFun'>
+
+            <view class='cardPlateImg'>
+                <image src='https://tp.datikeji.com/a/15456400182051/r1yQqGNSWXFdGABuKdJVnovTApxCVq9orDam1lSs.png' />
+            </view>
+
+            <view class='cardPlateBigQuan'>
+                <view class='cardPlateSmallQuan'>抽签</view>
+            </view>
+
+            <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+
+        </view>
+
+        <view class='ViewResults'>
+            <text bindtap='judgeUser'>查看抽签结果>></text>
+        </view>
+    </view>
+
+    <view class='botBtn'>
+        <view class='moreActive' hover-class='hover-class' bindtap='goToHomePage'>
+            <image src='https://tp.datikeji.com/a/15456453748718/XvbQl5ueaFqlbkflgXkIH4NhA40sYBCIfMqFafIs.png' />
+            <text>创建更多活动</text>
+        </view>
+        <view class='shareActive' bindtap='showposter'>
+            <image src='https://tp.datikeji.com/a/15456453865041/Gfgvn3p3pf7VTA5uhFKeowZWLNsanw8xm8PvbnPL.png' />
+            <text>邀请好友参加</text>
+        </view>
+    </view>
+
+    <view class='postersMask' wx:if="{{ifShowPoster}}" bindtap='posterClick'>
+        <view class='posterBody'>
+            <view class='invitFriend' hover-class='hover-class'>
+                <image src='https://tp.datikeji.com/a/15458994124532/ryULAfJZhlZ0w02Oep3qIOVGBlV35FIBDeI2N8gZ.png' />
+				<text>邀请微信好友</text>
+				<button id='shareBtn' open-type='share'></button>
+            </view>
+            <view class='invitPic' bindtap='goToNowActive' hover-class='hover-class'>
+                <image src='https://tp.datikeji.com/a/15459004323032/JREHmIfuaa3pbgcsevwjde5jfcxBzxRZ8hMWpAR0.png' />
+				<text>生成邀请图</text>
+            </view>
+            <view class='invitLine'></view>
+            <view class='invitCancel' hover-class='hover-class'>取消</view>
+        </view>
+    </view>
+
+</view>

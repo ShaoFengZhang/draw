@@ -1,0 +1,83 @@
+<view class="bg">
+
+    <view class='cardBody'>
+
+        <view class='cardTitle'>
+            <text class='cardTitleTxt'>[ 主题 ]</text>
+            <text>{{title}}</text>
+        </view>
+
+        <view class='cardPlate {{ani}}' bindtap='drawClickFun'>
+
+            <view class='cardPlateImg'>
+                <image src='https://tp.datikeji.com/a/15456400182051/r1yQqGNSWXFdGABuKdJVnovTApxCVq9orDam1lSs.png' />
+            </view>
+
+            <view class='playerList'>
+
+                <view class='listIcon'>
+                    <image src='{{ifPrizeIcon}}' />
+                </view>
+
+                <view class='listDesTxt'>一共
+                    <text style='color:#FDC92A'> {{participate_num}} </text>张卡片，
+                    <text style='color:#FDC92A'> {{winning}}/{{selection_num}} </text>个幸运儿已被抽取
+                </view>
+
+                <view class='listScrollBox normalView'>
+                    <scroll-view scroll-y style='height:100%;'>
+
+                        <view class='playitemBox' wx:if="{{playerArr.length}}" wx:for="{{playerArr}}" wx:key="index">
+
+                            <view class='playerItem'>
+                                <view class='playerIcon'>
+                                    <image src='{{item.pic}}' />
+                                </view>
+
+                                <view class='playerInfo normalView'>
+                                    <view class='playerName'>{{item.userName}}</view>
+                                    <view class='playDate'>{{item.time}}</view>
+                                </view>
+
+                                <view class='ifSelect' wx:if="{{item.is_prize}}">
+                                    <view>
+                                        <image src='{{crayIcon}}' />
+                                    </view>
+                                    <view style='color:#FB8888'>幸运儿</view>
+                                </view>
+                                <view class='ifSelect' wx:if="{{!item.is_prize}}">
+                                    <view>
+                                        <image src='{{cryIcon}}' />
+                                    </view>
+                                    <view style='color:#9D9D9D'>参与者</view>
+                                </view>
+                            </view>
+
+							<view class='itemLine'></view>
+                        </view>
+
+						<view class='botPrompt texalCen' wx:if="{{!playerArr.length && ifShowView}}">暂时还没有人参与哦~</view>
+
+                    </scroll-view>
+                </view>
+
+            </view>
+        </view>
+
+        <view class='botBtn'>
+            <view class='moreActive' bindtap='goToHomePage'>
+                <image src='https://tp.datikeji.com/a/15456453748718/XvbQl5ueaFqlbkflgXkIH4NhA40sYBCIfMqFafIs.png' />
+                <text wx:if="{{!(ifPrizeIcon==NotCardIcon)}}">新创建一个</text>
+                <text wx:if="{{ifPrizeIcon==NotCardIcon}}">返回抽卡</text>
+            </view>
+            <view class='shareActive'>
+                <image src='https://tp.datikeji.com/a/15456453865041/Gfgvn3p3pf7VTA5uhFKeowZWLNsanw8xm8PvbnPL.png' />
+                <text>邀请好友参加</text>
+				<button id='shareBtn' open-type='share'></button>
+            </view>
+        </view>
+    </view>
+
+
+
+</view>

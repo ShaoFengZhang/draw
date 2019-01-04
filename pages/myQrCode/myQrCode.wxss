@@ -1,0 +1,206 @@
+.qrBg {
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-size: cover;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://tp.datikeji.com/a/15458170644010/S6FRZAPwW2gIWLEdAVYQhUKJivaVpqhi5dbMWt0F.png');
+}
+
+.userImg {
+    width: 128rpx;
+    height: 128rpx;
+    background: rgba(255, 255, 255, 1);
+    border: 4rpx solid rgba(237, 73, 64, 0.16);
+    border-radius: 50%;
+    overflow: hidden;
+    left: 44rpx;
+    top: 0;
+    box-sizing: border-box;
+}
+
+.wodeyaoqingma {
+    font-size: 26rpx;
+    left: 198rpx;
+    bottom: 14rpx;
+}
+
+.qrBody {
+    width: 680rpx;
+    height: 946rpx;
+    background: rgba(255, 255, 255, 1);
+    /* box-shadow: 0px 3rpx 20rpx 0px rgba(111, 105, 103, 0.16); */
+    border-radius: 8rpx;
+    margin: 90rpx auto 0;
+    overflow: hidden;
+}
+
+.qrBodyMyData {
+    width: 680rpx;
+    height: 120rpx;
+    box-sizing: border-box;
+    margin-top: 40rpx;
+    position: relative;
+}
+
+.qrBodyMyData view {
+    position: absolute;
+}
+
+.qrBodyuserImg {
+    top: 0;
+    left: 55rpx;
+}
+
+.qrBodyuserName {
+    top: 26rpx;
+}
+
+.qrBodywodeyaoqingma {
+    bottom: 16rpx;
+}
+
+.qrBodyuserName, .qrBodywodeyaoqingma {
+    width: 420rpx;
+    left: 202rpx;
+}
+
+.myQr, .myQr image {
+    width: 540rpx;
+    height: 540rpx;
+}
+
+.myQr {
+    margin: 20rpx auto 0;
+}
+
+.Qrtxt {
+    width: 100%;
+    text-align: center;
+    font-size: 28rpx;
+    color: #797979;
+    margin-top: 24rpx;
+}
+
+.saveBtn {
+    width: 440rpx;
+    height: 88rpx;
+    background: #ffb554;
+    border-radius: 44rpx;
+    margin: 34rpx auto 0;
+    text-align: center;
+    line-height: 88rpx;
+    color: #fff;
+}
+
+#baoBtn {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.botBtnBox {
+    width: 100%;
+    height: 88rpx;
+    box-sizing: border-box;
+    padding: 0 44rpx;
+    margin-top: 36rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30rpx;
+    color: #333;
+    line-height: 88rpx;
+    text-align: center;
+}
+
+.botBtnBox view {
+    width: 320rpx;
+    height: 88rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: -4rpx 9rpx 20rpx 0px rgba(217, 128, 0, 0.32);
+    border-radius: 44rpx;
+	position: relative;
+}
+
+.botBtnBox image,.saveBtn image{
+	width: 30rpx;
+	height: 30rpx;
+	vertical-align: middle;
+	margin-right: 20rpx;
+}
+
+#contact{
+	width: 320rpx;
+    height: 88rpx;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
+/* 弹窗 */
+
+.serviceMask {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.MaskBody {
+    width: 530rpx;
+    height: 600rpx;
+    background: rgba(254, 252, 253, 1);
+    border-radius: 32rpx;
+    margin: 268rpx auto 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.maskPromtTxt {
+    font-size: 40rpx;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 60rpx;
+    text-align: center;
+    margin-top: 80rpx;
+    margin-bottom: 68rpx;
+}
+
+.MaskBody image {
+    width: 38rpx;
+    height: 56rpx;
+    position: absolute;
+    top: 50rpx;
+    left: 0;
+}
+
+.txtDetil {
+	padding: 0 74rpx;
+	box-sizing: border-box;
+    text-align: center;
+    font-size: 34rpx;
+    line-height: 72rpx;
+}
+
+#customerBtn {
+    width: 360rpx;
+    height: 68rpx;
+    background: #ffb554;
+    border-radius: 34rpx;
+    margin: 60rpx auto 0;
+    font-size: 30rpx;
+    color: rgba(255, 255, 255, 1);
+    line-height: 68rpx;
+}

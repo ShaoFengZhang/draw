@@ -1,0 +1,62 @@
+<view class="bg">
+    <view class='qrBg'>
+
+        <view class='qrBody'>
+
+            <view class='qrBodyMyData'>
+
+                <view class='userImg qrBodyuserImg'>
+                    <open-data type="userAvatarUrl"></open-data>
+                </view>
+
+                <view class='userName qrBodyuserName'>
+                    <open-data type="userNickName"></open-data>
+                </view>
+
+                <view class='wodeyaoqingma qrBodywodeyaoqingma'>我的邀请码</view>
+
+            </view>
+
+            <view class='myQr'>
+                <image src='{{qrcodeImg}}'></image>
+            </view>
+
+            <view class='Qrtxt'>好友打开微信扫一扫，即可使用</view>
+
+            <view class='saveBtn' bindtap='drawcanvs'>
+                <image src='https://tp.datikeji.com/a/15459930654724/ppclQvSFFRmbmyyLKVd4P8BZEWd11HeX6aAT9lUr.png' />
+                <text>保存邀请码</text>
+            </view>
+
+        </view>
+
+        <view class='botBtnBox'>
+            <view bindtap='ifShowServiceMask'>
+                <image src='https://tp.datikeji.com/a/15459929372260/oZDCbkWbvw0gDOrLjK6FSi81AM9AijpdByBkG7Gk.png' />
+                <text>联系客服</text>
+                <!-- <button id='contact' open-type='contact'></button> -->
+            </view>
+            <view>
+                <image src='https://tp.datikeji.com/a/15459929491826/yZgwt9flnZwAI7a22WnZJWEF0Mg2Js17l6MtMQ9T.png' />
+                <text>直接推荐</text>
+                <button id='contact' open-type='share'></button>
+            </view>
+        </view>
+
+
+        <view class='serviceMask' wx:if="{{ifShowServiceMask}}" bindtap='ifShowServiceMask'>
+            <view class='MaskBody'>
+                <image src='/assets/point.png' />
+                <view class='maskPromtTxt'>提示</view>
+                <view class='txtDetil'>
+                    <view>如果您需要客服的帮助</view>
+                    <view>请在接下来的页面留言</view>
+                </view>
+                <button id='customerBtn' open-type="contact">立即留言</button>
+            </view>
+        </view>
+
+    </view>
+</view>
+
+<canvas canvas-id="canvas" style="width:{{bgimgW}}px;height:{{bgimgH}}px;display:block;position:absolute; bottom:1500px" />

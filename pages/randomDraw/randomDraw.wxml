@@ -1,0 +1,52 @@
+<view calss="bg">
+
+    <view class='topImgBox'>
+        <image src='https://tp.datikeji.com/a/15459826773637/oGLjACxLNxthJdZzoOngQwHqNY3xO50B64Z9Ou1T.png' />
+    </view>
+
+    <view class='textDes'>
+        <text class='texalCen' style='color:#FFF;font-size:24rpx;'>抽签</text>
+        <text style='color:#333;font-size:30rpx;'>输入主题并选择人数，发起抽签后分享给好友抽取卡片，等待抽卡结果，抽中的人去做指定的事。</text>
+    </view>
+
+    <view class='drawSetUp'>
+
+        <view class='drawIdea playuserNum'>
+            <text class='textTitle1' style='color:#D0D0D0;font-size:30rpx;'>抽签主题</text>
+            <input class='textinput' maxlength="40" bindinput="bindinput" value="{{inputValue}}" placeholder="今天谁发红包?" placeholder-class="placeInput"></input>
+        </view>
+
+		<view class='line'></view>
+
+        <view class='playDraw playuserNum'>
+            <text class='textTitle2' style='color:#D0D0D0;font-size:30rpx;'>参与人数</text>
+            <text bindtap='playerNumMinus' class='minusIcon normalView'></text>
+            <input class='numinput' bindinput="playBindinput" maxlength="4" value="{{playerNum}}" placeholder="请输入参与人数" type="number" placeholder-class="placeInput2"></input>
+            <text bindtap='playerNumAdd' class=' minusIcon normalView addicon'></text>
+        </view>
+
+		<view class='line'></view>
+
+        <view class='selectDraw playuserNum'>
+            <text class='textTitle3' style='color:#D0D0D0;font-size:30rpx;'>选中人数</text>
+            <text bindtap='selectPlayerNumMinus' class='minusIcon normalView'></text>
+            <input class='numinput' bindinput="SelectBindinput" maxlength="4" value="{{selectPlayerNum}}" placeholder="请输入选中人数" type="number" placeholder-class="placeInput2"></input>
+            <text bindtap='selectPlayerNumAdd' class=' minusIcon normalView addicon'></text>
+        </view>
+
+    </view>
+
+    <!-- 底部满人数选择按钮 -->
+    <view class='drawIdeaGlob playuserNum'>
+        <text class='textTitle' style='color:#9D9D9D;font-size:26rpx;'>参与者先抽签才可以查看结果</text>
+		<image class='breath' style='width:34rpx;height:34rpx;margin-right:136rpx;' catchtap='showModel' src='https://tp.datikeji.com/a/15465738838115/307BT6KvLPKJdZivK6YsDkaft0rFIjfFhzJPSQTH.png' />
+        <switch color="#FFC16F" bindchange="switch1Change" />
+    </view>
+
+    <!-- 底部发起抽签按钮 -->
+    <view class='drawBtnBox' bindtap='DrawClickEvent'>
+        <text>发起抽签</text>
+        <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+    </view>
+
+</view>

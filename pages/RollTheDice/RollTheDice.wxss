@@ -1,0 +1,310 @@
+.bg {
+    background-color: #ffb554;
+}
+
+.dice {
+    height: 1032rpx;
+    overflow: hidden;
+}
+
+.modeType {
+    width: 100%;
+    color: #fff;
+    font-size: 40rpx;
+    line-height: 80rpx;
+    padding: 0 210rpx;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.modeType view {
+    position: relative;
+}
+
+.modeType text {
+    display: inline-block;
+    width: 28rpx;
+    height: 4rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 2rpx;
+    position: absolute;
+    bottom: 0rpx;
+    left: 46rpx;
+}
+
+.bigBox {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffb554;
+    background-image: url("https://tp.datikeji.com/a/15464864904439/X2uJibJ7zDijn73zAZQQs0kVyFAaApy0Q8L8YJCC.png");
+    background-size: 750rpx 482rpx;
+    position: relative;
+}
+
+.shake image, .shake {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.shake {
+    position: absolute;
+}
+
+.topShake {
+    top: 150rpx;
+    left: 28rpx;
+}
+
+.botShake {
+    top: 963rpx;
+    right: 60rpx;
+}
+
+.theLid, .theLid image {
+    width: 502rpx;
+    height: 464rpx;
+}
+
+.theLid {
+    position: absolute;
+    top: 266rpx;
+    left: 125rpx;
+    z-index: 2;
+}
+
+.bowl {
+    width: 622rpx;
+    height: 574rpx;
+    background-image: url("https://tp.datikeji.com/a/15463995774077/wWCcShB18zjRo7r5QrUBTEaACvKiV2QjnOAjUdu2.png");
+    background-size: 622rpx 574rpx;
+    position: absolute;
+    top: 460rpx;
+    left: 68rpx;
+}
+
+.bowl image {
+    width: 76rpx;
+    height: 82rpx;
+    border-radius: 50%;
+    box-shadow: -6rpx -1rpx 10rpx 0rpx rgba(187, 120, 32, 0.2);
+    position: absolute;
+}
+
+.oneDice {
+    top: 129rpx;
+    left: 195rpx;
+}
+
+.twoDice {
+    top: 115rpx;
+    left: 280rpx;
+}
+
+.threeDice {
+    top: 140rpx;
+    left: 406rpx;
+}
+
+.fourDice {
+    top: 171rpx;
+    left: 335rpx;
+}
+
+.fiveDice {
+    top: 186rpx;
+    left: 248rpx;
+}
+
+.sixDice {
+    top: 162rpx;
+    left: 130rpx;
+}
+
+.botBtnView {
+    width: 100%;
+    height: 106rpx;
+    padding: 0 86rpx;
+    display: flex;
+    justify-content: space-between;
+    margin: 18rpx auto 0;
+}
+
+.botBtnView view {
+    position: relative;
+}
+
+.botBtnView image {
+    width: 102rpx;
+    height: 106rpx;
+}
+
+.setUp {
+    width: 750rpx;
+    height: 1206rpx;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.setUpView {
+    width: 702rpx;
+    height: 98rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20rpx 0px rgba(168, 168, 168, 0.2);
+    border-radius: 8rpx;
+    line-height: 98rpx;
+    position: relative;
+}
+
+.leftView, .rightView {
+    width: 90rpx;
+    height: 98rpx;
+    position: absolute;
+    top: 0;
+}
+
+.leftView {
+    left: 182rpx;
+}
+
+.rightView {
+    right: 60rpx;
+}
+
+.diceNum {
+    margin: 664rpx auto 0;
+}
+
+.voice {
+    margin: 30rpx auto 0;
+}
+
+.dicetxt {
+    margin-left: 40rpx;
+    margin-right: 92rpx;
+}
+
+.diceNumTxt {
+    display: inline-block;
+    width: 248rpx;
+    height: 98rpx;
+    text-align: center;
+}
+
+.voiceTxt {
+    display: inline-block;
+    width: 312rpx;
+    height: 98rpx;
+    text-align: center;
+}
+
+.diceNum image {
+    width: 44rpx;
+    height: 44rpx;
+    vertical-align: middle;
+}
+
+.voice image {
+    width: 10rpx;
+    height: 20rpx;
+}
+
+.wave {
+    margin: 30rpx auto 0;
+    color: #333;
+    font-size: 30rpx;
+    position: relative;
+}
+
+.wave image {
+    width: 42rpx;
+    height: 38rpx;
+    vertical-align: middle;
+    margin-left: 136rpx;
+    margin-right: 70rpx;
+}
+
+#shareBtn {
+    width: 702rpx;
+    height: 98rpx;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#shareFriend {
+    width: 102rpx;
+    height: 106rpx;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.closeIcon {
+    position: absolute;
+    top: 576rpx;
+    right: 24rpx;
+}
+
+.closeIcon, .closeIcon image {
+    width: 58rpx;
+    height: 58rpx;
+}
+
+.TopAni {
+    transition: transform 0.8s;
+    transform: translateY(-180rpx);
+}
+
+.BotAni {
+    transition: transform 0.8s;
+    transform: translateY(0rpx);
+}
+
+.zaniBox {
+    width: 100%;
+    height: 952rpx;
+    overflow: hidden;
+}
+
+.zAni {
+    animation: zAni 0.2s ease-in-out 5;
+    transform-origin: 50% 80%;
+}
+
+@keyframes zAni {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(10deg);
+    }
+
+    50% {
+        transform: rotateZ(0deg);
+    }
+
+    75% {
+        transform: rotateZ(-10deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+.hover-class {
+    /* background-color: #f2f2f2; */
+}

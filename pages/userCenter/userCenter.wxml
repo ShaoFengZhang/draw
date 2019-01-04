@@ -1,0 +1,99 @@
+<view class='bg'>
+
+    <view class='topUserInfo bosborder'>
+
+        <view class='headPortrait bosborder'>
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+
+        <view class='userName bosborder'>
+            <open-data type="userNickName"></open-data>
+        </view>
+
+        <view class='qrBox bosborder' bindtap='navToMyQrCode'>
+            <image src='/assets/myData/qrFlag.png' />
+            <image src='/assets/myData/arrow.png' />
+        </view>
+
+        <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+
+    </view>
+
+    <view class='aboutMe bosborder texalCen'>
+        <view class='{{myLaunche}}' data-way='1' bindtap='aboutMePlay'>
+            <text>我发起的</text>
+            <text style='font-size:40rpx;'> {{release_count}} </text>
+        </view>
+        <view class='{{myJoin}}' data-way='2' bindtap='aboutMePlay'>
+            <text>我参加的</text>
+            <text style='font-size:40rpx;'> {{part_count}} </text>
+        </view>
+    </view>
+
+    <scroll-view class='scrollView' scroll-y="{{isScroll}}" style="height: {{scrollHeight}}rpx;">
+
+        <view class='scrollViewItemBox' wx:if="{{typeWay==1? (item.is_end!=2 && item.is_end!=3):(item.status!=1)}}" data-index='{{index}}' data-navType='{{item.type}}' bindtap='goToItemContent' data-ifDelete='{{item.is_end}}' data-release_id='{{typeWay==1?item.id:item.release_id}}' data-title='{{item.title}}' wx:for="{{ItemArr}}"
+            wx:key="{{index}}" bindtouchstart="{{drawStart}}" bindtouchmove="{{drawMove}}">
+
+            <view class='activityItem bosborder' hover-class="hover-class" style='transform: translateX({{item.transX}}rpx)'>
+
+                <view class='ItemIcon bosborder'>
+                    <image mode='aspectFill' style='width:160rpx;height:160rpx;border-radius:8rpx;' src='https://tp.datikeji.com/a/15459875894353/KispL52uZo9PLrfVHak0mWE17sYznQ5XCMbdeYUf.png' />
+                    <text wx:if="{{item.is_end==0}}">进行中</text>
+                    <text wx:if="{{item.is_end==1}}" style='background:rgba(170,130,129,0.59);'>已结束</text>
+                    <text wx:if="{{item.is_end==2}}" style='background:rgba(170,130,129,0.59);'>已删除</text>
+                    <text wx:if="{{item.is_end==3}}" style='background:rgba(170,130,129,0.59);'>已终止</text>
+                </view>
+
+                <view class='ItemDes bosborder'>
+
+                    <view class='itemDesTitle'>
+                        <text wx:if="{{item.type==0}}" style='color:#fff;font-size:24rpx;'>抽签</text>
+                        <text wx:if="{{item.type==1}}" style='color:#fff;font-size:24rpx;'>做选择</text>
+                        <text style='color:#333;font-size:30rpx;'>{{item.title}}</text>
+                    </view>
+
+                    <view class='itemDesuserInof'>
+                        <view class='playerIcon'>
+                            <image src='{{item.userPic}}' />
+                        </view>
+
+                        <text class='playUserName' style='color:#9D9D9D;font-size:24rpx;'>{{item.userName}}</text>
+                        <text class='clockView normalView'></text>
+                        <text class='playDate'>{{item.time}}</text>
+                    </view>
+
+                </view>
+            </view>
+            <view class='delete' data-release_id='{{typeWay==1?item.id:item.release_id}}' wx:if="{{item.ifShowDel}}" catchtap='deleteViewClick'>删除</view>
+
+            <view class='line' style='transform: translateX({{item.transX}}rpx)'></view>
+
+        </view>
+        <view class='botPrompt texalCen' wx:if="{{(typeWay==1?!release_count:!part_count) && ifshowView}}">暂时还没有数据哦~</view>
+        <view class='botPrompt texalCen' wx:if="{{(typeWay==1?release_count:part_count) && ifshowView}}">左滑可以分享或删除活动，无法撤销哦~~</view>
+    </scroll-view>
+
+    <view class='postersMask' wx:if="{{ifShowPoster}}" catchtap='deleteCatchTap'>
+        <view class='invitFriendShare' hover-class='hover-class' style='bottom: {{typeWay==1?344:226}}rpx;'>
+            <image src='https://tp.datikeji.com/a/15458994124532/ryULAfJZhlZ0w02Oep3qIOVGBlV35FIBDeI2N8gZ.png' />
+            <text>分享活动</text>
+            <button id='shareBtn' open-type='share'></button>
+        </view>
+        <view class='posterBody' style='height:{{typeWay==1?344:226}}rpx'>
+            <view class='invitFriend' bindtap='deleteData' data-type='{{typeWay==1?1:2}}'>
+                <image src='https://tp.datikeji.com/a/15459011093596/PIeshZoK8cgN8XdVD9iygEhOPza9egrDImK9d8XU.png' />
+                <text>删除记录</text>
+            </view>
+
+            <view class='invitPic' bindtap='deleteData' data-type='2' wx:if="{{typeWay==1}}">
+                <image src='https://tp.datikeji.com/a/15459011405798/TCYi6WDYg0YoAn9775vLD4VvBkK4TYXI8epaGoow.png' />
+                <text>删除主题，停止活动</text>
+            </view>
+            <view class='invitLine'></view>
+            <view class='invitCancel'>取消</view>
+        </view>
+    </view>
+
+
+</view>

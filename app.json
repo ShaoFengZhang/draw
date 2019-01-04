@@ -1,0 +1,46 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/userCenter/userCenter",
+		"pages/randomDraw/randomDraw",
+		"pages/overTheCard/overTheCard",
+		"pages/drawRecord/drawRecord",
+		"pages/myQrCode/myQrCode",
+		"pages/nowActive/nowActive",
+		"pages/RollTheDice/RollTheDice"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTextStyle": "black"
+	},
+	"navigateToMiniProgramAppIdList": [
+		"wx316552261ac875d8",
+		"wx32540bd863b27570",
+		"wx8abaf00ee8c3202e"
+	],
+	"tabBar": {
+		"color": "#D8CAB7",
+		"selectedColor": "#FFB554",
+		"backgroundColor": "#fff",
+		"borderStyle": "#D4D4D4",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "玩法",
+				"iconPath": "/assets/noSelectPlay.png",
+				"selectedIconPath": "/assets/selsectPlay.png"
+			},
+			{
+				"pagePath": "pages/userCenter/userCenter",
+				"text": "我的",
+				"iconPath": "/assets/noSelectMy.png",
+				"selectedIconPath": "/assets/selectMy.png"
+			}
+		]
+	},
+	"networkTimeout": {
+		"request": 10000
+	},
+	"debug": false
+}

@@ -1,0 +1,186 @@
+/* 顶部 */
+
+.topView {
+    width: 100%;
+    height: 124rpx;
+    text-align: left;
+    padding: 0 84rpx 0 26rpx;
+    line-height: 124rpx;
+    font-size: 64rpx;
+    font-weight: bold;
+}
+
+.topView image {
+    width: 102rpx;
+    height: 124rpx;
+    float: right;
+}
+
+/* 玩法选项 */
+
+.scrollItemBox {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 24rpx;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.scrollItem {
+    width: 340rpx;
+    height: 278rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 30rpx 0px rgba(168, 168, 168, 0.3);
+    border-radius: 8rpx;
+    margin-bottom: 22rpx;
+    overflow: hidden;
+	position: relative;
+}
+
+.scrollItem:nth-child(1) {
+    margin-top: 20rpx;
+}
+
+.scrollItem:nth-child(2) {
+    margin-top: 20rpx;
+}
+
+.serialNumber {
+    width: 50rpx;
+    height: 50rpx;
+    background: rgba(255, 243, 226, 1);
+    border-radius: 0px 0px 8rpx 8rpx;
+    color: #ffaa3a;
+    font-size: 28rpx;
+    line-height: 50rpx;
+    margin-left: 30rpx;
+    text-align: center;
+}
+
+.scrollItemDetai {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    text-align: left;
+    margin-top: 60rpx;
+    box-sizing: border-box;
+    padding-left: 30rpx;
+}
+
+.scrollItemDetai image {
+    display: block;
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.itemIconBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20rpx;
+}
+
+.itemTitle {
+    color: #333;
+    font-size: 36rpx;
+}
+
+.itemInstructions {
+    color: #9d9d9d;
+    font-size: 26rpx;
+    margin-top: 16rpx;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.statement {
+    font-size: 26rpx;
+    color: #ffb554;
+    margin-top: 10rpx;
+}
+
+.hover-class {
+    background-color: #f2f2f2;
+}
+
+/* roulerMask */
+
+.RulesMask {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.ruleBody {
+    width: 648rpx;
+    height: 1064rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10rpx;
+    color: #333;
+    font-size: 24rpx;
+	position: absolute;
+	left: 51rpx;
+	bottom: 12rpx;
+}
+
+.ruleTitle, .ruleTitle image {
+    width: 648rpx;
+    height: 154rpx;
+    border-radius: 10rpx 10rpx 0px 0px;
+}
+
+.ruleContient {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 40rpx;
+    margin-top: 22rpx;
+}
+
+.ruleStep {
+    margin-top: 16rpx;
+}
+
+.ruleStep text:first-child {
+    display: inline-block;
+    width: 26rpx;
+    height: 26rpx;
+    background: rgba(255, 181, 84, 1);
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 26rpx;
+    font-size: 20rpx;
+    margin-right: 6rpx;
+}
+
+.ruleStep text:last-child {
+    line-height: 42rpx;
+}
+
+.ruleBtn {
+    width: 404rpx;
+    height: 78rpx;
+    background: rgba(255, 181, 84, 1);
+    box-shadow: 0px 4rpx 16rpx 0px rgba(255, 193, 111, 0.6);
+    border-radius: 8rpx;
+	margin: 20rpx auto 0;
+	color: #fff;
+	line-height: 78rpx;
+	text-align: center;
+}
+
+.mask{
+	width: 340rpx;
+	height: 278rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:rgba(51,51,51,0.1);
+    box-shadow: 0px 0px 30rpx 0px rgba(168, 168, 168, 0.3);
+    border-radius: 8rpx;
+}

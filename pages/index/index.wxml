@@ -1,0 +1,82 @@
+<view calss='bg'>
+
+    <view class='topView normalView'>
+        <text>一起来玩乐</text>
+        <image src='/assets/index/topicon.png' />
+    </view>
+
+    <scroll-view scroll-y style="height:{{scrollHeight}}rpx;">
+
+        <view class='scrollItemBox'>
+
+            <view class='scrollItem' hover-class='hover-class' bindtap='navgateEvent' wx:for="{{itemArr}}" wx:key="{{index}}" data-path='{{item.path}}'>
+                <view class='serialNumber'>{{index+1}}</view>
+
+                <view class='scrollItemDetai'>
+                    <view class='itemIconBox'>
+                        <image src='{{item.icon}}' />
+                    </view>
+
+                    <view>
+                        <view class='itemTitle'>{{item.title}}</view>
+                        <view class='itemInstructions'>{{item.content}}</view>
+                    </view>
+
+                </view>
+
+				<view class='mask' wx:if="{{!item.path}}"></view>
+            </view>
+
+        </view>
+
+        <view class='statement normalView' wx:if="{{ifShowView}}" bindtap='statementEvent'>免责声明 >></view>
+    </scroll-view>
+
+
+    <view class='RulesMask' wx:if="{{ifShowRule}}">
+        <view class='ruleBody' style='bottom:{{topHeight}}rpx'>
+            <view class='ruleTitle'>
+                <image src='https://tp.datikeji.com/a/15459844134651/WSMUXEbi57sHLqF5Hecbcp9AhaIO8uwLHpoxJmfW.png' />
+            </view>
+            <view class='ruleContient'>
+                <view style='fon-size:28rpx;line-height:38rpx;'>感谢您选择抽签工具，在你使用过程中请务必遵守以下条款:</view>
+                <view class='ruleStep stepOne'>
+                    <text>1</text>
+                    <text>用户所发起的活动必须遵守所属地区和国家的法律以及规定。</text>
+                </view>
+
+                <view class='ruleStep stepOne'>
+                    <text>2</text>
+                    <text>用户使用抽签工具发起的活动，包含但不仅限于所使用的图片文字及其附属特征不得侵犯他人合法权益</text>
+                </view>
+
+                <view class='ruleStep stepOne'>
+                    <text>3</text>
+                    <text>若用户通过抽签工具发起的活动违反相关规定、存在侵犯他人或集体的权益等违规行为，平台有权利删除对应活动和用户至永久。</text>
+                </view>
+
+                <view class='ruleStep stepOne'>
+                    <text>4</text>
+                    <text>用户发起的活动以及参与用户的利益、伤害等附带关系由发起人和参与用户自行协商处理，与平台无关</text>
+                </view>
+
+                <view class='ruleStep stepOne'>
+                    <text>5</text>
+                    <text>欢迎广大用户对发布虚假活动、涉及违规的个人以及活动进行监督，平台会在第一时间处理。</text>
+                </view>
+
+                <view class='ruleStep stepOne'>
+                    <text>6</text>
+                    <text>对于用户执意在条款明确禁止范围上的操作，以及由此造成的任何直接、间接、不可预测风险由该用户自行承担。
+					</text>
+                </view>
+
+                <view class='ruleBtn' style='font-size:30rpx;' bindtap='statementEvent'>
+                    我已阅读并知晓
+                </view>
+
+
+            </view>
+        </view>
+    </view>
+</view>

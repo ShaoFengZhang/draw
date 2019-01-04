@@ -1,0 +1,209 @@
+/* 顶部图片 */
+
+.topImgBox {
+    margin: 0 auto;
+}
+
+.topImgBox image, .topImgBox {
+    width: 702rpx;
+    height: 350rpx;
+    border-radius: 8rpx;
+}
+
+/* 文字描述 */
+
+.textDes {
+    width: 690rpx;
+    height: 82rpx;
+    margin: 0 auto;
+    line-height: 40rpx;
+    margin-top: 32rpx;
+}
+
+.textDes text:first-child {
+    display: inline-block;
+    width: 60rpx;
+    height: 32rpx;
+    background: rgba(255, 193, 111, 1);
+    border-radius: 4rpx;
+    line-height: 32rpx;
+    margin-right: 20rpx;
+}
+
+/* 内容设置 */
+
+.line {
+    width: 622rpx;
+    height: 2rpx;
+    background: rgba(232, 232, 232, 1);
+    margin: 0 auto;
+}
+
+.drawSetUp {
+    width: 702rpx;
+    height: 372rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20rpx 0px rgba(168, 168, 168, 0.2);
+    border-radius: 8rpx;
+    margin: 38rpx auto 0;
+}
+
+.drawIdeaGlob {
+    width: 702rpx;
+    height: 98rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20rpx 0px rgba(168, 168, 168, 0.2);
+    border-radius: 8rpx;
+    margin: 30rpx auto 0;
+    box-sizing: border-box;
+    padding-left: 40rpx;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.drawIdea {
+    width: 100%;
+    height: 116rpx;
+    padding-left: 40rpx;
+	display: flex;
+	align-items: center;
+}
+
+.playDraw {
+    width: 100%;
+    height: 128rpx;
+    padding-left: 40rpx;
+	display: flex;
+	align-items: center;
+}
+
+.selectDraw {
+    width: 100%;
+    height: 124rpx;
+    padding-left: 40rpx;
+	display: flex;
+	align-items: center;
+}
+
+.playuserNum text {
+    display: inline-block;
+}
+
+.minusIcon {
+    width: 44rpx;
+    height: 44rpx;
+    background-image: url('https://tp.datikeji.com/a/15458922779922/aSgKfuZVqRiDqtbbiHMJumrwLdebvXDHd2gnRkqV.png');
+}
+
+.addicon {
+    background-image: url('https://tp.datikeji.com/a/15458923303259/j2LKJ1rTNQSToynGnj9QMHfLn0OkcpLhkUyIUHbn.png');
+}
+
+.textTitle {
+    height: 98rpx;
+    line-height: 98rpx;
+    margin-right: 18rpx;
+}
+
+.textTitle1 {
+    height: 116rpx;
+    line-height: 116rpx;
+    margin-right: 86rpx;
+}
+
+.textTitle2 {
+    height: 128rpx;
+    line-height: 128rpx;
+    margin-right: 86rpx;
+}
+
+.textTitle3 {
+    height: 124rpx;
+    line-height: 124rpx;
+    margin-right: 86rpx;
+}
+
+.textNum {
+    width: 195rpx;
+    height: 98rpx;
+    line-height: 98rpx;
+}
+
+/* 输入框 */
+
+input.textinput {
+    width: 450rpx;
+    height: 116rpx;
+    color: #333;
+    font-size: 30rpx;
+    float: right;
+    box-sizing: border-box;
+    padding-right: 30rpx;
+}
+
+input.numinput {
+    width: 261rpx;
+    height: 128rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+
+.placeInput {
+    color: #d4d4d4;
+    font-size: 30rpx;
+}
+
+.placeInput2 {
+    color: #d4d4d4;
+    font-size: 20rpx;
+}
+
+/* 发起抽签按钮 */
+
+.drawBtnBox {
+    width: 750rpx;
+    height: 98rpx;
+    background: rgba(255, 181, 84, 1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 30rpx;
+    line-height: 98rpx;
+    text-align: center;
+    color: #fff;
+}
+
+#getInfo {
+    width: 750rpx;
+    height: 98rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.mark{
+	 animation: mark 1.5s ease-in-out infinite;
+}
+
+@keyframes mark {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+	50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+	100% {
+        opacity: 1;
+    }
+}

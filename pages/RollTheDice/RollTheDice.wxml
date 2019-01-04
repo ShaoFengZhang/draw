@@ -1,0 +1,112 @@
+<view calss="bg">
+
+    <view class='bigBox normalView' bindtouchstart="{{drawStart}}" bindtouchmove="{{drawMove}}" bindtouchend='{{drawEnd}}'>
+        <view class='topShake shake' wx:if="{{zAni}}">
+            <image src='https://tp.datikeji.com/a/15465082507304/cjUZ1Y6IFzzuMc7G3wBG4zvVQHUWkKZqlGSUMQoT.png' />
+        </view>
+
+        <view class='botShake shake' wx:if="{{zAni}}">
+            <image src='https://tp.datikeji.com/a/15465082847664/Uj2Bi2MxYIUJuDo89gJZgtevcBVLiNCE7Ms6JSYD.png' />
+        </view>
+
+        <!-- 顶部banner -->
+        <view class='modeType normalView '>
+            <view data-type='1' catchtap='modeTypeClick'>
+                手动开
+                <text wx:if="{{tabType==1}}"></text>
+            </view>
+
+            <view data-type='2' catchtap='modeTypeClick'>
+                自动开
+                <text wx:if="{{tabType==2}}"></text>
+            </view>
+        </view>
+
+        <!-- 主体 -->
+        <view class='dice {{zAni}}'>
+
+            <view class='zaniBox'>
+
+                <view class='theLid {{TopAni}} {{BotAni}}' catchtap='{{thelidClick}}'>
+                    <image src='https://tp.datikeji.com/a/15464863379184/Wt9Q3dHoMwiuq82KVZQ7XAnxIitvncJwCplOKS9b.png' />
+                </view>
+
+                <view class='bowl normalView'>
+                    <image wx:for="{{DiceArr}}" wx:key="index" wx:if="{{item.ifSHowDice}}" class='{{item.class}}' src='{{item.DiceIcon}}' />
+                </view>
+
+            </view>
+
+        </view>
+
+        <!-- 底部按钮 -->
+        <view class='botBtnView normalView'>
+            <view catchtap='ifShowSetUpView1'>
+                <image src='https://tp.datikeji.com/a/15464026638418/TWBGIW3HbWYFTOjID5zsthufJkeSdxoltmJQXHsn.png' />
+            </view>
+
+            <view catchtap='{{waveClickEvent}}'>
+                <image src='https://tp.datikeji.com/a/15464026831942/cu645SDFPEPwPISwlAnOuN0tnIbv49WRTXnUWknS.png' />
+            </view>
+
+            <view catchtap='{{openClickEvent}}' wx:if='{{!TopAni && tabType==1}}'>
+                <image src='https://tp.datikeji.com/a/15464026966768/kADzMS5Frh5dZ1uhLL1z75wakz76GPgMh4kqRk4V.png' />
+            </view>
+
+			<view catchtap='clickBInd2'  wx:if='{{TopAni && tabType==1}}'>
+                <image src='https://tp.datikeji.com/a/15465876457205/7zVTmGZTa5QxSBFAlo3vdZcmlef0YkYhw7pVTAPp.png' />
+            </view>
+
+            <view wx:if="{{tabType==2}}">
+                <image src='https://tp.datikeji.com/a/15464996724925/hMc4ZSyyadxrME2kK2rcuDDuG1ObhAndeN4xunm4.png' />
+                <button id='shareFriend' open-type='share'></button>
+            </view>
+
+        </view>
+
+    </view>
+
+    <!-- 设置弹窗 -->
+    <view class='setUp' wx:if="{{ifShowSetUp}}" data-num='1' catchtap='ifShowSetUpView'>
+
+		<view class='closeIcon'>
+			<image src='https://tp.datikeji.com/a/15465877856325/x9gAUEWvUQzCYnWOBzXIhjI8dSwOwart4uspVRSK.png' />
+		</view>
+
+        <view class=' setUpView diceNum' catchtap='catchtap'>
+            <text class='dicetxt' style='color:#9D9D9D;font-size:30rpx;'>骰子数量</text>
+            <image catchtap='MinusFun' src='/assets/minus.png' />
+            <text class='diceNumTxt' style='color:#333;font-size:30rpx;'>{{setDiceNum}}</text>
+            <image catchtap='Addfun' src='/assets/add.png' />
+        </view>
+
+        <view class=' setUpView diceNum voice' catchtap='catchtap'>
+            <text class='dicetxt' style='color:#9D9D9D;font-size:30rpx;'>声音效果</text>
+            <image src='https://tp.datikeji.com/a/15464216986137/VSPGQc4GlNFhM0JJ1gd2e020KuNSvt78zSwWbrnf.png' />
+            <view catchtap='voiceFun' class='leftView'></view>
+            <text catchtap='voiceFun' class='voiceTxt' style='color:#333;font-size:30rpx;'>{{voiceTxt==1?"开":"关"}}</text>
+            <image src='https://tp.datikeji.com/a/15464217181975/7hZVVN64n0LG9O4xBkRdBkcnHiWaXXerOrsZEyx4.png' />
+            <view catchtap='voiceFun' class='rightView'></view>
+        </view>
+
+        <view class=' setUpView diceNum voice' catchtap='catchtap'>
+            <text class='dicetxt' style='color:#9D9D9D;font-size:30rpx;'>震动效果</text>
+            <image src='https://tp.datikeji.com/a/15464216986137/VSPGQc4GlNFhM0JJ1gd2e020KuNSvt78zSwWbrnf.png' />
+            <view catchtap='zhendongFun' class='leftView'></view>
+            <text catchtap='zhendongFun' class='voiceTxt' style='color:#333;font-size:30rpx;'>{{shakeTxt==1?"开":"关"}}</text>
+            <image src='https://tp.datikeji.com/a/15464217181975/7hZVVN64n0LG9O4xBkRdBkcnHiWaXXerOrsZEyx4.png' />
+            <view catchtap='zhendongFun' class='rightView'></view>
+        </view>
+
+        <!-- <view class='setUpView wave' data-num='1' catchtap='wavePhoneFun'>
+            <image src='https://tp.datikeji.com/a/15464115771965/RqxEOXGD1lCuBTjQqmS0nEVljZwiwAVOnIMvdCl8.png' />
+            <text>摇晃手机让骰子动起来</text>
+        </view> -->
+
+        <view class='setUpView wave'>
+            <image src='https://tp.datikeji.com/a/15458994124532/ryULAfJZhlZ0w02Oep3qIOVGBlV35FIBDeI2N8gZ.png' />
+            <text>邀请好友一起来玩</text>
+            <button catchtap='catchtap' id='shareBtn' open-type='share'></button>
+        </view>
+    </view>
+</view>

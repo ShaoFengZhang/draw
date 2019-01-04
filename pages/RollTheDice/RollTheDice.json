@@ -1,0 +1,7 @@
+{
+	"navigationBarBackgroundColor": "#FFB554",
+	"navigationBarTextStyle": "white",
+	"backgroundColor": "#FFB554",
+	"navigationBarTitleText": "摇骰子",
+	"disableScroll": true
+}
