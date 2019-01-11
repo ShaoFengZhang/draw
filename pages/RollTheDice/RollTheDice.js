@@ -100,10 +100,14 @@ Page({
 
     onHide: function() {
         wx.stopAccelerometer();
+		this.DiceAudio.stop();
     },
 
     onUnload: function() {
-        wx.stopAccelerometer()
+        wx.stopAccelerometer();
+		this.DiceAudio.stop();
+		clearTimeout(this.firstTimer);
+		clearTimeout(this.secontTimer);
     },
 
     // 分享
@@ -288,7 +292,7 @@ Page({
 			drawEnd: '',
 			thelidClick:'',
         });
-        setTimeout(function() {
+		this.firstTimer=setTimeout(function() {
             if (e && e.currentTarget.dataset.num) {
                 _this.ifShowSetUpView();
             };
@@ -302,7 +306,7 @@ Page({
             _this.produceDice(_this.data.setDiceNum);
         }, this.diceTimeOne);
 
-        setTimeout(function() {
+        this.secontTimer=setTimeout(function() {
             _this.setData({
                 waveClickEvent: 'wavePhoneFun',
                 openClickEvent: "clickBInd",

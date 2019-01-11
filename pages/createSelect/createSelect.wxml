@@ -1,0 +1,51 @@
+<view class="bg">
+
+    <view class='topContent normalView'>
+
+        <view class='topContentTxtView'>
+            <text class='selectTxt' style='font-size:26rpx;color:#FFB554'>选择</text>
+            <text class=''>首先输入你想做选择的事情；然后把选项依次填到下方；完成创建后转动大转盘让系统随机为你选一个。</text>
+        </view>
+
+        <view class='selectTheme'>
+            <view>
+                <image src='https://tp.datikeji.com/a/15469183116968/3mVRuSLcpgU6oLs2661kHMBYfh36PVdqvXaSjrOc.png' />
+            </view>
+
+            <input bindinput="titleBindinput" value='{{themeTitle}}' maxlength='18' id='themeInput' placeholder-class="placeClass" placeholder="输入你的选择主题 | 限18位中英文数字"></input>
+        </view>
+
+    </view>
+
+    <view class='itemListBox' style="height:{{scrollHeight}}rpx;">
+
+        <scroll-view scroll-y style="height:{{scrollHeight}}rpx;" scroll-into-view="{{scrollId}}">
+            <view id="scroll{{index}}" class='selectTheme itemBox itemArr' wx:if="{{themeItem.length}}" wx:for="{{themeItem}}" wx:key="{{index}}">
+                <view bindtap='MinsSelect' data-num='{{index}}'>
+                    <image src='https://tp.datikeji.com/a/15469193186271/ZBIjVkwbTkBW9bbHFdmQVm9DjLgjy8rp0nRqcL9T.png' />
+                </view>
+
+                <input bindinput="ItemBindinput" data-num='{{index}}' maxlength='12' value="{{item.title}}" id='themeInput' placeholder-class="placeClass" placeholder="输入你的备用选择 | 限12位中英文数字"></input>
+
+            </view>
+
+            <view id="scroll{{themeItem.length}}" class='selectTheme itemBox itemAdd' bindtap='Addselect'>
+                <view>
+                    <image src='https://tp.datikeji.com/a/15469198683282/8ETqYWaXFR35OwK0CKaa2uzBuP8MzygMIjFreOnR.png' />
+                </view>
+
+                <view style=' width:138rpx;color:#FFB554;font-size:30rpx;text-align:left;'>添加选项</view>
+
+                <view style=' width:258rpx;color:#D4D4D4;font-size:30rpx;text-align:left;'>（最多添加17个）</view>
+
+            </view>
+        </scroll-view>
+
+    </view>
+
+    <!-- 底部创建按钮 -->
+    <view class='creatBtn normalView' bindtap='completeClick'>
+        完成创建
+    </view>
+
+</view>

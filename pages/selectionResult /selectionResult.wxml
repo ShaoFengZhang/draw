@@ -1,0 +1,67 @@
+<view class="bg">
+
+    <view class='userCard'>
+
+        <view class='userIcon normalView'>
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+
+        <view class='content'>
+            {{s_awards}}
+        </view>
+
+        <view class='promptTxt' catchtap='ifShowPrompt'>
+            <text>看看其他人会选到什么>></text>
+            <image class='breath' style='width:34rpx;height:34rpx;' src='https://tp.datikeji.com/a/15465738838115/307BT6KvLPKJdZivK6YsDkaft0rFIjfFhzJPSQTH.png' />
+        </view>
+
+    </view>
+
+    <view class='botBtnBox'>
+	
+        <view class='againBtn' catchtap='gameAgain' wx:if="{{ifShowAgain}}">
+            <image src='https://tp.datikeji.com/a/15470943425267/p2javmbyMj2qQzN7WGAW1Z6H1mkCtlZqhtJWbhV7.png' />
+            <text>再来一次</text>
+        </view>
+
+		<view class='againBtn'  wx:if="{{!ifShowAgain}}"  catchtap='goToIndex'>
+            <image src='https://tp.datikeji.com/a/15471008787619/dfoc3hw8SV2e2ASDC2HLNEVqjUQnWdC1DL1FRVv8.png' />
+            <text>更多活动</text>
+        </view>
+
+        <view class='shareBtn'>
+            <image src='https://tp.datikeji.com/a/15470944085697/Zj7sv1gILYHPVOxTqNnaDPMeaNl5aqGNO7JGitlt.png' />
+            <text>邀请好友</text>
+            <button id='botShare' open-type='share'></button>
+        </view>
+
+    </view>
+
+    <view class='promptMask' wx:if="{{promptIsShow}}">
+
+        <view class="maskBody">
+
+            <view class='bodyIcon'>
+                <image src='https://tp.datikeji.com/a/15470988515560/YbJ4rHhy9CQlPTXrguLRgO2Ua916XaDYf6if05rP.png' />
+            </view>
+
+            <view class='MaskContent'>
+                <!-- <text>邀请好友参与后就可以看到好友的选择，好友参与后每人的记录只会保留第一条。</text> -->
+                <text>功能拼命内测中，即将发布！</text>
+
+            </view>
+
+            <view class='MaskShareBtn' catchtap='ifShowPrompt'>
+                <text>推荐给好友</text>
+                <button id='maskShare' open-type='share'></button>
+            </view>
+
+            <view class='closeBtn'  catchtap='ifShowPrompt'>
+                <image src='/assets/close.png'></image>
+            </view>
+
+        </view>
+
+    </view>
+
+</view>

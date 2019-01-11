@@ -1,0 +1,9 @@
+{
+	"navigationBarBackgroundColor": "#FFB554",
+	"navigationBarTextStyle": "white",
+	"backgroundColor": "#ffffff",
+	"usingComponents": {
+		"zhuanpan": "/components/zhuanpan/zhuanpan"
+	},
+	"disableScroll": true
+}

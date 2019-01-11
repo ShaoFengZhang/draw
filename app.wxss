@@ -77,3 +77,68 @@ button::after {
 .hover-class {
     background-color: #f2f2f2;
 }
+
+/* 弹窗 */
+
+.promptMask {
+    width: 750rpx;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.maskBody {
+    width: 608rpx;
+    height: 534rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10rpx;
+    position: relative;
+    margin: 288rpx auto 0;
+}
+
+.bodyIcon, .bodyIcon image {
+    width: 608rpx;
+    height: 184rpx;
+    border-radius: 10rpx 10rpx 0 0;
+}
+
+.MaskContent {
+    width: 508rpx;
+    height: 152rpx;
+    font-size: 34rpx;
+    color: rgba(51, 51, 51, 1);
+    line-height: 52rpx;
+    text-align: center;
+    margin: 34rpx auto 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+.MaskShareBtn {
+    width: 404rpx;
+    height: 78rpx;
+    background: rgba(255, 181, 84, 1);
+    box-shadow: 0px 4rpx 16rpx 0px rgba(255, 193, 111, 0.6);
+    border-radius: 39rpx;
+    font-size: 30rpx;
+    color: rgba(254, 254, 254, 1);
+    line-height: 78rpx;
+    text-align: center;
+    margin: 32rpx auto 0;
+    position: relative;
+}
+
+.closeBtn,.closeBtn image{
+	width: 58rpx;
+	height: 58rpx;
+}
+
+.closeBtn{
+	position: absolute;
+	top: -78rpx;
+	right: 0;
+}

@@ -150,13 +150,56 @@ Page({
 			util.showToastFun('该活动已删除')
 			return;
 		};
+
+		// 抽签
 		if (navType==0){
 			wx.navigateTo({
 				url: `/pages/overTheCard/overTheCard?actId=${actId}&userId=${wx.getStorageSync('u_id')}`,
 			})
-		}
+		};
+
+		// 做选择
+		if (navType == 1) {
+			this.selectClickList(actId);
+		};
 		
     },
+
+	// 做选择查看事件
+	selectClickList:function(id){
+		util.showLoadfun('loading');
+		let _this = this;
+		let selectClickListURL = wxAPIF.domin + 'clickList';
+		wxAPIF.wxRequest(_this, selectClickListURL, "POST", {
+			open_id: wx.getStorageSync('user_openID'),
+			popular_id: id,
+		}, function (res) {
+			wx.hideLoading();
+			if (res.code == 0) {
+				console.log(res);
+				if(res.data==1){
+					wx.navigateTo({
+						url: `/pages/daZhuanPan/daZhuanPan?title=${res.title}&sun=${JSON.stringify(res.select_content.split("`||"))}&SType=${2}&selectId=${id}`,
+					})
+				}else{
+					wx.navigateTo({
+						url: `/pages/selectionResult /selectionResult?s_awards=${res.data.content}&title=${res.data.title}&userId=${wx.getStorageSync('u_id')}`,
+					});
+				}
+			}else{
+				wx.showModal({
+					title: '提示',
+					content: '网络错误',
+					showCancel: false,
+					success: function () {
+						wx.switchTab({
+							url: '/pages/index/index'
+						})
+					}
+				})
+			}
+		})
+	},
 
     //删除Mask点击事件
     deleteCatchTap: function() {

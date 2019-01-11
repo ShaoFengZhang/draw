@@ -1,0 +1,245 @@
+/* 顶部两个按钮 */
+
+.topTabar {
+    width: 100%;
+    padding: 0 24rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50rpx;
+}
+
+.topTabar view {
+    width: 324rpx;
+    height: 98rpx;
+    font-size: 34rpx;
+    border-radius: 10rpx;
+    line-height: 98rpx;
+}
+
+.selectTopBar {
+    background: rgba(255, 193, 111, 1);
+    box-shadow: 0px 4rpx 16rpx 0px rgba(255, 193, 111, 0.6);
+    color: #fff;
+}
+
+.noSelectTopBar {
+    background: rgba(244, 238, 230, 1);
+    color: #cebfaa;
+}
+
+/* 列表 */
+
+.templateList {
+    width: 100%;
+    margin-top: 50rpx;
+    box-sizing: border-box;
+}
+
+.itemBigBox text {
+    display: inline-block;
+    width: 562rpx;
+    /* 单行文本...效果 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.itemBigBox {
+    width: 702rpx;
+    margin: 0 auto;
+}
+
+.itemView {
+    width: 702rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 30rpx 0px rgba(168, 168, 168, 0.3);
+    border-radius: 8rpx;
+    color: #333;
+    font-size: 30rpx;
+    padding: 0 50rpx;
+    margin: 0rpx auto 40rpx;
+    position: relative;
+}
+
+.setItemView {
+    height: 198rpx;
+}
+
+.itemViewNormal {
+    height: 98rpx;
+    line-height: 98rpx;
+    text-align: left;
+}
+
+.itemView image {
+    width: 10rpx;
+    height: 18rpx;
+    vertical-align: middle;
+    float: right;
+    margin-top: 40rpx;
+    transform-origin: 50% 50%;
+    transform: rotateZ(90deg);
+}
+
+.setItemView image {
+    transform: rotateZ(-90deg);
+}
+
+.setTopView, .setBotView {
+    width: 100%;
+    height: 98rpx;
+}
+
+.setTopView {
+    text-align: left;
+    line-height: 98rpx;
+    color: #333;
+    font-size: 30rpx;
+}
+
+.setBotView {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 40rpx;
+}
+
+.setBotView view {
+    width: 160rpx;
+    height: 58rpx;
+    background: rgba(255, 181, 84, 1);
+    border-radius: 29rpx;
+    color: #fff;
+    line-height: 58rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+
+#deleteView {
+    background: rgba(51, 51, 51, 1);
+    font-size: #fff;
+}
+
+.line {
+    width: 602rpx;
+    height: 2rpx;
+    background: rgba(232, 232, 232, 1);
+}
+
+.maskClick {
+    width: 80rpx;
+    height: 98rpx;
+    position: absolute;
+    top: 0;
+    right: 20rpx;
+}
+
+.creatBtn {
+    width: 750rpx;
+    height: 98rpx;
+    background: rgba(255, 181, 84, 1);
+	color: #fff;
+	line-height: 98rpx;
+	font-size: 30rpx;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/* 底部提示文字 */
+
+.botPrompt {
+    color: #9d9d9d;
+    font-size: 22rpx;
+    margin-top: 24rpx;
+    padding-bottom: 30rpx;
+}
+
+/* 删除梦层 */
+
+.postersMask {
+    width: 100%;
+    height: 100vh;
+    background: rgba(51, 51, 51, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.posterBody {
+    width: 750rpx;
+    height: 344rpx;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 0rpx;
+    left: 0;
+    font-size: 30rpx;
+}
+
+.posterBody image {
+    width: 38rpx;
+    height: 38rpx;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+.invitFriend, .invitPic {
+    width: 100%;
+    height: 118rpx;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 118rpx;
+    color: #333;
+}
+
+.invitFriend {
+    border-bottom: 2rpx solid #e8e8e8;
+}
+
+.invitLine {
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(243, 243, 243, 1);
+}
+
+.invitCancel {
+    width: 100%;
+    height: 88rpx;
+    color: #9d9d9d;
+    line-height: 88rpx;
+    text-align: center;
+}
+
+.invitFriendShare {
+    width: 100%;
+    height: 118rpx;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 118rpx;
+    color: #333;
+    background-color: #fff;
+    border-bottom: 2rpx solid #e8e8e8;
+    font-size: 30rpx;
+    position: absolute;
+    left: 0;
+}
+
+.invitFriendShare image {
+    width: 38rpx;
+    height: 38rpx;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+
+#shareBtn {
+    width: 100%;
+    height: 118rpx;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}

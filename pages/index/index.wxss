@@ -35,8 +35,20 @@
     border-radius: 8rpx;
     margin-bottom: 22rpx;
     overflow: hidden;
-	position: relative;
+    position: relative;
 }
+
+/* navigator */
+
+.navChoujiang,navigator {
+    width: 340rpx;
+    height: 278rpx;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+
 
 .scrollItem:nth-child(1) {
     margin-top: 20rpx;
@@ -90,7 +102,7 @@
     color: #9d9d9d;
     font-size: 26rpx;
     margin-top: 16rpx;
-	overflow: hidden;
+    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -123,9 +135,9 @@
     border-radius: 10rpx;
     color: #333;
     font-size: 24rpx;
-	position: absolute;
-	left: 51rpx;
-	bottom: 12rpx;
+    position: absolute;
+    left: 51rpx;
+    bottom: 12rpx;
 }
 
 .ruleTitle, .ruleTitle image {
@@ -168,19 +180,19 @@
     background: rgba(255, 181, 84, 1);
     box-shadow: 0px 4rpx 16rpx 0px rgba(255, 193, 111, 0.6);
     border-radius: 8rpx;
-	margin: 20rpx auto 0;
-	color: #fff;
-	line-height: 78rpx;
-	text-align: center;
+    margin: 20rpx auto 0;
+    color: #fff;
+    line-height: 78rpx;
+    text-align: center;
 }
 
-.mask{
-	width: 340rpx;
-	height: 278rpx;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background:rgba(51,51,51,0.1);
+.mask {
+    width: 340rpx;
+    height: 278rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(51, 51, 51, 0.1);
     box-shadow: 0px 0px 30rpx 0px rgba(168, 168, 168, 0.3);
     border-radius: 8rpx;
 }

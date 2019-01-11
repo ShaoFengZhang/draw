@@ -53,4 +53,29 @@
         </view>
     </view>
 
+	<!-- 提示框 -->
+	<view class='promptMask' wx:if="{{promptIsShow}}">
+
+        <view class="maskBody">
+
+            <view class='bodyIcon'>
+                <image src='https://tp.datikeji.com/a/15470988515560/YbJ4rHhy9CQlPTXrguLRgO2Ua916XaDYf6if05rP.png' />
+            </view>
+
+            <view class='MaskContent'>
+                <text>发起人设置了必须先参与抽签后才能查看抽签结果，请您先参与！</text>
+            </view>
+
+            <view class='MaskShareBtn' catchtap='ifShowPrompt'>
+                <text>我知道了</text>
+            </view>
+
+            <view class='closeBtn'  catchtap='ifShowPrompt'>
+                <image src='/assets/close.png'></image>
+            </view>
+
+        </view>
+
+    </view>
+
 </view>

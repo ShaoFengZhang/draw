@@ -1,0 +1,47 @@
+<view class="bg">
+
+    <view class='bigBox normalView'>
+
+        <swiper id='topSwiper' current="{{currentIndex}}" autoplay="{{autoplay}}" vertical="{{true}}" interval="{{interval}}" duration="{{duration}}" circular="{{true}}">
+            <swiper-item wx:for="{{themeItem}}" wx:key="{{index}}">
+                <view class='topContent'>
+                    {{item.title}}
+                </view>
+            </swiper-item>
+        </swiper>
+
+        <!-- 转盘 -->
+        <view class='RotaryBox normalView'>
+
+            <view class='zhuanpanBox' style='width:{{size.w}}rpx;height:{{size.h}}rpx'>
+                <zhuanpan id='zhuanpan' bind:startGame="startGame" bind:myAwards="getAwards" bind:startZhuan="startZhuan" size='{{size}}' musicflg='{{musicflg}}' awardsConfig='{{awardsConfig}}'>
+                </zhuanpan>
+            </view>
+
+            <!-- 光圈1 -->
+            <view class='haloOne halo'>
+                <image src='https://tp.datikeji.com/a/15471076237589/w0DUQjePUemW1zOdqbFXd69E5rEppJWHhLFNMfGd.png' />
+            </view>
+
+            <view class='haloTwo halo' wx:if="{{ifhaloOne}}">
+                <image src='https://tp.datikeji.com/a/15471076343769/HjgrQDUw7fn4uid3ajSHrG5U0QXsjhHzulq3EdY1.png' />
+            </view>
+
+            <view class='personIcon'>
+                <image src='https://tp.datikeji.com/a/15471078756188/y9jS0lB10XpgyAvAPb4PVE9VzVQZmZ8WwEgZU39x.png' />
+            </view>
+
+        </view>
+
+        <view class='startBtn normalView' catchtap='{{goGame}}'>
+            <text>点击开始</text>
+            <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfoBot' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+        </view>
+
+        <view class='goGameBtn' catchtap='{{goGame}}'>
+            <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfoTop' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+        </view>
+
+    </view>
+
+</view>

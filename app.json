@@ -7,7 +7,11 @@
 		"pages/drawRecord/drawRecord",
 		"pages/myQrCode/myQrCode",
 		"pages/nowActive/nowActive",
-		"pages/RollTheDice/RollTheDice"
+		"pages/RollTheDice/RollTheDice",
+		"pages/SelectTemplate/SelectTemplate",
+		"pages/createSelect/createSelect",
+		"pages/daZhuanPan/daZhuanPan",
+		"pages/selectionResult /selectionResult"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

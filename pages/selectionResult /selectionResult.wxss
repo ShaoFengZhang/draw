@@ -1,0 +1,110 @@
+.bg {
+    background-size: 750rpx 730rpx;
+    background-image: url('https://tp.datikeji.com/a/15470907757291/ZSQizj6xuDDjgsxPmK49gTv8yJyf3BsXEQwvfYba.png');
+}
+
+.userCard {
+    width: 702rpx;
+    height: 326rpx;
+    background: rgba(254, 254, 254, 1);
+    box-shadow: 0px 0px 20rpx 0px rgba(168, 168, 168, 0.2);
+    border-radius: 8rpx;
+    margin: 696rpx auto 0;
+    position: relative;
+}
+
+.userIcon {
+    width: 148rpx;
+    height: 148rpx;
+    background: rgba(157, 157, 157, 1);
+    border: 4rpx solid rgba(255, 255, 255, 1);
+    box-shadow: 0px 2rpx 4rpx 0px rgba(114, 65, 0, 0.22);
+    border-radius: 50%;
+    margin: 0rpx auto 0;
+    position: relative;
+    bottom: 46rpx;
+}
+
+.content {
+    width: 568rpx;
+    height: 60rpx;
+    background: rgba(116, 119, 255, 1);
+    border-radius: 35rpx;
+    margin: 0rpx auto 0;
+    position: relative;
+    bottom: 6rpx;
+    line-height: 60rpx;
+    color: #fefefe;
+    font-size: 36rpx;
+    text-align: center;
+}
+
+.promptTxt {
+    width: 100%;
+    text-align: center;
+    font-size: 28rpx;
+    color: #ffb554;
+    margin-top: 38rpx;
+}
+
+.promptTxt image {
+    vertical-align: middle;
+    margin-left: 10rpx;
+}
+
+.botBtnBox {
+    width: 100%;
+    height: 88rpx;
+    box-sizing: border-box;
+    padding: 0 27rpx;
+    display: flex;
+    justify-content: space-between;
+    line-height: 88rpx;
+    text-align: center;
+    font-size: 30rpx;
+    margin-top: 40rpx;
+}
+
+.botBtnBox image {
+    width: 28rpx;
+    height: 30rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+.againBtn {
+    width: 338rpx;
+    height: 88rpx;
+    border: 2rpx solid rgba(255, 193, 111, 1);
+    border-radius: 44rpx;
+    color: #ffb554;
+}
+
+.shareBtn {
+    width: 338rpx;
+    height: 88rpx;
+    background: rgba(255, 181, 84, 1);
+    box-shadow: 0px 2rpx 20rpx 0px rgba(255, 181, 84, 0.68);
+    border-radius: 44rpx;
+    color: #fff;
+    position: relative;
+}
+
+#botShare {
+    width: 338rpx;
+    height: 88rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+#maskShare {
+    width: 404rpx;
+    height: 78rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+

@@ -17,13 +17,19 @@ Page({
                 icon: '/assets/index/choice.png',
                 title: '做选择',
                 content: '真心话大冒险',
-                path: null
+                path: "/pages/SelectTemplate/SelectTemplate"
             },
             {
                 icon: '/assets/index/RollDice.png',
                 title: '摇骰子',
                 content: '666要不要',
                 path: '/pages/RollTheDice/RollTheDice'
+            },
+            {
+                icon: '/assets/index/prize.png',
+                title: '发起抽奖',
+                content: '抽奖发起工具',
+                path: 'nav',
             },
             {
                 icon: '/assets/index/poinTstask.png',
@@ -53,6 +59,7 @@ Page({
     },
 
     onLoad: function(options) {
+        console.log(options)
         var _this = this;
         wx.getSystemInfo({
             success(res) {
@@ -105,12 +112,18 @@ Page({
             })
         };
         app.getDataFun = this.getDataFun;
-		if (options && options.roll){
-			wx.navigateTo({
-				url: '/pages/RollTheDice/RollTheDice',
-			})
-		}
+        if (options && options.roll) {
+            wx.navigateTo({
+                url: '/pages/RollTheDice/RollTheDice',
+            })
+        };
     },
+
+	navSelect:function(){
+		wx.navigateTo({
+			url: '/pages/SelectTemplate/SelectTemplate',
+		})
+	},
 
     onShow: function() {
         if (wx.getStorageSync('user_openID')) {
@@ -127,7 +140,7 @@ Page({
 
     // 分享
     onShareAppMessage: function() {
-		let title = "生活和聚会怎能少了这样的神器，超过一半的好友都在使用...";
+        let title = "生活和聚会怎能少了这样的神器，超过一半的好友都在使用...";
         let img = app.globalData.indexShareIcon;
         let path = `/pages/index/index?userId=${wx.getStorageSync('u_id')}`;
         return {
@@ -168,15 +181,18 @@ Page({
         let getDataFunUrl = wxAPIF.domin + 'getTemplate';
         wxAPIF.wxRequest(_this, getDataFunUrl, "POST", {
             open_id: wx.getStorageSync('user_openID'),
+            type: 0,
         }, function(res) {
             wx.hideLoading();
             console.log(res);
             if (res.code == 0) {
                 _this.setData({
                     ifShowView: true,
-                    itemArr: res.data.slice(0, res.data.length-1),
+                    itemArr: res.data,
                 })
             }
         })
     },
+
+    catchtap: function() {},
 })

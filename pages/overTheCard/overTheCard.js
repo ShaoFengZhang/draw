@@ -8,6 +8,7 @@ Page({
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         ifShowPoster: false,
 		plaseDraw:false,
+		promptIsShow:false,
     },
 
     onLoad: function(opts) {
@@ -170,16 +171,21 @@ Page({
         })
     },
 
+	// ifShowPrompt
+	ifShowPrompt:function(){
+		this.setData({
+			promptIsShow: !this.data.promptIsShow,
+		})
+	},
+
 	goToResults2: function () {
 		if (this.data.is_end) {
 			util.showToastFun("发起人已将活动删除");
 			return;
 		};
 		if (this.data.plaseDraw) {
-			wx.showModal({
-				title: '抽签提示',
-				content: '发起人已设置了必须先参与抽签后才可以查看抽签结果，请您先参与！',
-				showCancel:false,
+			this.setData({
+				promptIsShow:true,
 			})
 			return;
 		};
@@ -292,11 +298,12 @@ Page({
 					url: `/pages/drawRecord/drawRecord?release_id=${_this.data.actId}`,
 				})
 			} else {
-				wx.showModal({
-					title: '抽签提示',
-					content: '发起人规定必须先参与抽签才可以查看抽签结果，请您先参与！',
-					showCancel: false,
-				})
+				// wx.showModal({
+				// 	title: '抽签提示',
+				// 	content: '发起人规定必须先参与抽签才可以查看抽签结果，请您先参与！',
+				// 	showCancel: false,
+				// });
+				_this.ifShowPrompt()
 			}
 
 		});

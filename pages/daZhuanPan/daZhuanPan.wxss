@@ -1,0 +1,187 @@
+.bg {
+    background-color: #ffb554;
+}
+
+.bigBox {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffb554;
+    background-image: url("https://tp.datikeji.com/a/15464864904439/X2uJibJ7zDijn73zAZQQs0kVyFAaApy0Q8L8YJCC.png");
+    background-size: 750rpx 482rpx;
+    position: relative;
+}
+
+/* zhuanpan */
+
+.canvas-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+.gb-wheel-content {
+    position: relative;
+    margin: 0 auto;
+    z-index: 2;
+    width: 660rpx;
+    height: 660rpx;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-size: 12px 14px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2) inset;
+    overflow: hidden;
+}
+
+.gb-wheel-run {
+    box-shadow: 0 0 5rpx 0rpx rgba(0, 0, 0, 0.98);
+    width: 700rpx;
+    height: 700rpx;
+    border-radius: 50%;
+    border: 30rpx solid #f1ecec;
+    box-sizing: border-box;
+    position: absolute;
+    left: 27rpx;
+    top: -19rpx;
+    opacity: 1;
+}
+
+.gb-wheel-line {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+.gb-wheel-litem {
+    position: absolute;
+    left: 340rpx;
+    top: 0;
+    width: 1.2px;
+    height: 340rpx;
+    background-color: #fff;
+    overflow: hidden;
+    transform-origin: 50% 340rpx;
+}
+
+.gb-wheel-list {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+.gb-wheel-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.gb-wheel-icontent {
+    position: relative;
+    display: block;
+    padding-top: 50rpx;
+    margin: 0 auto;
+    text-align: center;
+    transform-origin: 50% 328rpx;
+}
+
+/* 转盘背景 */
+
+.RotaryBox {
+    width: 700rpx;
+    height: 945rpx;
+    background-size: 700rpx 945rpx;
+    background-image: url("https://tp.datikeji.com/a/15471068515160/kng2TkbszUp0vJ0lFCYgNvoy0MYTWJo3UJMaBBtb.png");
+    margin: 54rpx auto 0;
+}
+
+.zhuanpanBox {
+    box-sizing: border-box;
+    margin: 39rpx 0 0 39rpx;
+}
+
+/* 光圈 */
+
+.halo, .halo image {
+    width: 692rpx;
+    height: 692rpx;
+}
+
+.halo {
+    position: absolute;
+    top: 4rpx;
+    left: 4rpx;
+}
+
+.haloTwo {
+    z-index: 10;
+}
+
+.personIcon, .personIcon image {
+    width: 108rpx;
+    height: 204rpx;
+    z-index: 12;
+}
+
+.personIcon {
+    position: absolute;
+    top: 574rpx;
+    left: 74rpx;
+}
+
+.startBtn {
+    width: 454rpx;
+    height: 102rpx;
+    background-image: url("https://tp.datikeji.com/a/15471087493281/Hz9b9cCMpWMyqjBHT36Tcnb2GkvJ73kAeR7J1Fwh.png");
+    margin: 10rpx auto 0;
+    line-height: 102rpx;
+    font-size: 36rpx;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 1);
+}
+
+#getInfoBot{
+	width: 454rpx;
+    height: 102rpx;
+	position: absolute;
+	left: 0rpx;
+    top: 0rpx;
+	opacity: 0;
+}
+
+.startBtn text {
+    position: relative;
+    right: 30rpx;
+}
+
+.goGameBtn {
+    width: 138rpx;
+    height: 180rpx;
+    position: absolute;
+    left: 304rpx;
+    top: 357rpx;
+	z-index: 100;
+}
+
+#getInfoTop{
+	width: 138rpx;
+    height: 180rpx;
+    position: absolute;
+    left: 0rpx;
+    top: 0rpx;
+	z-index: 101;
+	opacity: 0;
+}
+
+/* 顶部swiper */
+#topSwiper{
+	height: 50rpx;
+	color: #fff;
+	font-size: 40rpx;
+}

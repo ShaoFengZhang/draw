@@ -1,7 +1,7 @@
 import wxAPIF from './utils/wxApiFun.js';
 // const ald = require('./utils/ald-stat.js');
 App({
-    onLaunch: function() {
+    onLaunch: function(options) {
         let _this = this;
         wx.getSystemInfo({
             success(res) {

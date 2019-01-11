@@ -211,12 +211,8 @@ Page({
             util.showToastFun('选中人数须小于参与人数');
             return;
         };
-        if (!this.data.playerNum || !this.data.selectPlayerNum) {
-            util.showToastFun('人数不能为0');
-            this.setData({
-                playerNum: 2,
-                selectPlayerNum: 1,
-            })
+        if (this.data.playerNum<=0 || this.data.selectPlayerNum<=0) {
+            util.showToastFun('人数不能小于1');
             return;
         }
         this.drawDataFun();

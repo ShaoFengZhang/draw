@@ -1,0 +1,109 @@
+.topContent {
+    width: 100%;
+    height: 374rpx;
+    background-image: url("https://tp.datikeji.com/a/15469169131273/tguz7QEtj5WcLc3GccRRjX6UkHjRVsrjMK6FiekR.png");
+	background-size: 100% 320rpx;
+	position: relative;
+}
+
+.topContentTxtView {
+    width: 700rpx;
+    height: 150rpx;
+    font-size: 34rpx;
+    color: #fff;
+    text-align: left;
+    margin: 58rpx auto 0;
+    line-height: 52rpx;
+}
+
+.selectTxt {
+    display: inline-block;
+    width: 64rpx;
+    height: 36rpx;
+    background: rgba(248, 248, 248, 1);
+    border-radius: 4rpx;
+    margin-right: 30rpx;
+    text-align: center;
+    line-height: 36rpx;
+}
+
+/* 主题 */
+
+.selectTheme {
+    width: 702rpx;
+    height: 98rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20rpx 0px rgba(168, 168, 168, 0.2);
+    border-radius: 8rpx;
+	position: absolute;
+	left: 27rpx;
+	bottom: 6rpx;
+	line-height: 98rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 20rpx 0 0;
+}
+
+.selectTheme view{
+	width: 90rpx;
+	height: 98rpx;
+}
+
+.selectTheme image{
+	width:38rpx;
+	height: 38rpx;
+	vertical-align: middle;
+}
+
+#themeInput{
+	display: inline-block;
+	width: 592rpx;
+	height: 98rpx;
+	color:#333;
+	font-size: 30rpx;
+	text-align: left;
+}
+
+.placeClass{
+	font-size: 30rpx;
+	color: #D4D4D4;
+}
+
+/* 内容列表 */
+.itemListBox{
+	width: 100%;
+	margin-top: 28rpx;
+}
+
+.itemBox{
+	position: static;
+	margin: 40rpx auto 0;
+}
+
+.itemBox:first-child{
+	margin-top: 6rpx;
+}
+
+.itemBox view{
+	text-align: center;
+}
+
+.itemAdd{
+	justify-content: start;
+	margin-bottom: 30rpx;
+}
+
+/* 底部按钮 */
+.creatBtn {
+    width: 750rpx;
+    height: 98rpx;
+    background: rgba(255, 181, 84, 1);
+	color: #fff;
+	line-height: 98rpx;
+	font-size: 30rpx;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

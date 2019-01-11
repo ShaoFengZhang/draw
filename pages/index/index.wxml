@@ -1,7 +1,7 @@
 <view calss='bg'>
 
     <view class='topView normalView'>
-        <text>一起来玩乐</text>
+        <text>一起抽抽抽</text>
         <image src='/assets/index/topicon.png' />
     </view>
 
@@ -21,10 +21,15 @@
                         <view class='itemTitle'>{{item.title}}</view>
                         <view class='itemInstructions'>{{item.content}}</view>
                     </view>
-
+					
                 </view>
 
-				<view class='mask' wx:if="{{!item.path}}"></view>
+                <view class='mask' wx:if="{{!item.path}}"></view>
+
+                <view class='navChoujiang' catchtap='catchtap' wx:if="{{item.path=='nav'}}">
+                    <navigator path="pages/release/release?jumpNew=true" target="miniProgram" open-type="navigate" app-id="wx316552261ac875d8"version="release">
+                    </navigator>
+                </view>
             </view>
 
         </view>

@@ -1,0 +1,74 @@
+<view class="bg">
+
+	<!--顶部bar-->
+    <view class='topTabar normalView'>
+        <view bindtap='topTabBarClick' data-num='1' class='hotSelectBtn {{hotSelect}}'>热门选择</view>
+        <view bindtap='topTabBarClick' data-num='2' class='mySelectBtn {{mySelect}}'>我的选择</view>
+    </view>
+
+	<!-- 列表 -->
+    <view class='templateList' style='height:{{scrollHeight}}rpx;'>
+
+        <scroll-view scroll-y style="height:{{scrollHeight}}rpx;">
+
+            <view class='itemBigBox' data-num='{{index}}' wx:for="{{itemList}}" wx:key="{{index}}" catchtap='goToDaZhuanPan'>
+
+                <view class='itemView itemViewNormal normalView' wx:if="{{item.showNormal}}">
+                    <text>{{item.title}}</text>
+                    <image src='/assets/myData/arrow.png' />
+                    <view data-num='{{index}}' catchtap='showSetView' class='maskClick'></view>
+                </view>
+
+                <view class='itemView setItemView normalView' wx:if="{{!item.showNormal}}" catchtap='catchtap'>
+
+                    <view data-num='{{index}}' class='setTopView' catchtap='goToDaZhuanPan'>
+                        <text>{{item.title}}</text>
+                        <image src='/assets/myData/arrow.png' />
+                        <view data-num='{{index}}' catchtap='hideSetView' class='maskClick'></view>
+                    </view>
+
+                    <view class='line'></view>
+
+                    <view class='setBotView'>
+                        <view data-num='{{index}}' wx:if="{{topbarSelect==1}}" catchtap='goToDaZhuanPan'>选择</view>
+                        <view catchtap='deleteBtnClick' id="deleteView" data-num='{{index}}' wx:if="{{topbarSelect==2}}">删除</view>
+                        <view catchtap='goToCreateSelect' data-num='{{index}}'>编辑</view>
+                    </view>
+                </view>
+
+            </view>
+
+			<view class='botPrompt texalCen' wx:if="{{!itemList.length && ifshowView}}">暂时还没有数据哦~</view>
+
+        </scroll-view>
+
+    </view>
+
+	<!-- 底部创建按钮 -->
+    <view class='creatBtn normalView' catchtap='goToCreateSelect'>
+        创建新选择
+    </view>
+
+	<!-- 删除弹窗 -->
+	<view class='postersMask' wx:if="{{ifShowPoster}}" catchtap='deleteCatchTap'>
+        <view class='invitFriendShare' hover-class='hover-class' style='bottom: {{344}}rpx;'>
+            <image src='https://tp.datikeji.com/a/15458994124532/ryULAfJZhlZ0w02Oep3qIOVGBlV35FIBDeI2N8gZ.png' />
+            <text>分享活动</text>
+            <button id='shareBtn' open-type='share'></button>
+        </view>
+        <view class='posterBody' style='height:{{344}}rpx'>
+            <view class='invitFriend' bindtap='deleteData' data-type='{{1}}'>
+                <image src='https://tp.datikeji.com/a/15459011093596/PIeshZoK8cgN8XdVD9iygEhOPza9egrDImK9d8XU.png' />
+                <text>删除记录</text>
+            </view>
+
+            <view class='invitPic' bindtap='deleteData' data-type='2'>
+                <image src='https://tp.datikeji.com/a/15459011405798/TCYi6WDYg0YoAn9775vLD4VvBkK4TYXI8epaGoow.png' />
+                <text>删除主题，停止活动</text>
+            </view>
+            <view class='invitLine'></view>
+            <view class='invitCancel'>取消</view>
+        </view>
+    </view>
+
+</view>

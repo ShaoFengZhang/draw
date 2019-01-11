@@ -4,16 +4,16 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.3",
+	"libVersion": "2.4.4",
 	"appid": "wxa9096f1da50aa304",
-	"projectname": "dazhuanpan",
+	"projectname": "draw",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -36,49 +36,42 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
-					"name": "我的",
-					"pathName": "pages/userCenter/userCenter",
+					"name": "首页",
+					"pathName": "pages/index/index",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "来抽签",
-					"pathName": "pages/randomDraw/randomDraw",
+					"name": "转盘",
+					"pathName": "pages/daZhuanPan/daZhuanPan",
 					"query": ""
 				},
 				{
-					"id": 2,
+					"id": -1,
+					"name": "我的模板",
+					"pathName": "pages/SelectTemplate/SelectTemplate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "选择结果",
+					"pathName": "pages/selectionResult /selectionResult",
+					"query": ""
+				},
+				{
+					"id": -1,
 					"name": "翻卡片",
 					"pathName": "pages/overTheCard/overTheCard",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "抽签记录",
-					"pathName": "pages/drawRecord/drawRecord",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "海报",
-					"pathName": "pages/nowActive/nowActive",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "我的二维码",
-					"pathName": "pages/myQrCode/myQrCode",
-					"query": ""
-				},
-				{
-					"id": 6,
 					"name": "骰子",
-					"pathName": "pages/RollTheDice/RollTheDice",
-					"query": ""
+					"pathName": "pages/RollTheDice/RollTheDice"
 				}
 			]
 		}
