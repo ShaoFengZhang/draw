@@ -1,0 +1,88 @@
+<view class="bg">
+
+    <view class='topImgBox'>
+        <image src='https://tp.datikeji.com/a/15459826773637/oGLjACxLNxthJdZzoOngQwHqNY3xO50B64Z9Ou1T.png' />
+    </view>
+
+	<!-- 任务数据 -->
+    <view class='numDetail'>
+        <view class='countNum'>
+            <view style='color:#333;font-size:30rpx;'>总人数</view>
+            <view style='color:#FFB554;font-size:40rpx;'>{{all_num}}</view>
+        </view>
+
+        <view class='verticalBar'></view>
+
+        <view class='taskArrNum'>
+            <view style='color:#333;font-size:30rpx;'>任务组数</view>
+            <view style='color:#FFB554;font-size:40rpx;'>{{task_num}}</view>
+        </view>
+
+        <view class='verticalBar'></view>
+
+        <view class='noJionNum'>
+            <view style='color:#333;font-size:30rpx;'>未参与人数</view>
+            <view style='color:#D0D0D0;font-size:40rpx;'>{{all_no_num}}</view>
+        </view>
+    </view>
+
+	<!-- 分配按钮 -->
+    <view class='joinTaskBox' wx:if="{{!self_join && all_no_num}}" catchtap='joinTask'>
+        <text>马上参与分任务</text>
+        <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo1' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+    </view>
+	
+    <view class='joinTaskBox haveJion' wx:if="{{self_join}}">
+        你已被分到任务{{self_join_Num+1}}
+    </view>
+
+	<view class='joinTaskBox istaskend' wx:if="{{!all_no_num && !self_join}}">
+        任务分配已结束
+    </view>
+
+    <!-- 参与人数列表 -->
+    <view class='taskList' style='height:{{scrollHeight}}rpx'>
+
+        <scroll-view scroll-y style='height:{{scrollHeight-20}}rpx' scroll-into-view="{{scrollId}}">
+
+            <view id="scroll{{index+1}}" class='taskItem' wx:for="{{join_User}}" wx:key="{{index}}">
+
+                <view class='taskTitle'>
+                    任务{{index+1}}：{{item.title}}
+                </view>
+
+                <view class='taskuser'>
+                    <image src='{{item.userPic}}' wx:for="{{item.par_info}}" wx:key="{{index}}"/>
+                </view>
+
+                <view class='noPeople' wx:if="{{!item.par_info.length}}">暂时还没有人参与哦~</view>
+
+                <view catchtap='ifCheckAll' data-all='show' class='checkAll' data-index='{{index}}' wx:if="{{item.par_info.length>5 && item.checkAll}}"> 查看完整>> </view>
+                <view catchtap='ifCheckAll' data-all='hide'  class='checkAll' data-index='{{index}}' wx:if="{{item.par_info.length>5 && !item.checkAll}}">
+                    <text class='dialog-close' decode='true'>收起&lt;&lt;</text>
+                </view>
+
+            </view>
+
+        </scroll-view>
+
+
+    </view>
+
+    <!-- 底部按钮 -->
+    <view class='botBtnBox'>
+        <view class='againBtn' wx:if="{{!ifShowAgain}}" catchtap='goToIndex'>
+            <image src='https://tp.datikeji.com/a/15471008787619/dfoc3hw8SV2e2ASDC2HLNEVqjUQnWdC1DL1FRVv8.png' />
+            <text>创建更多活动</text>
+        </view>
+
+        <view class='shareBtn'>
+            <image src='https://tp.datikeji.com/a/15470944085697/Zj7sv1gILYHPVOxTqNnaDPMeaNl5aqGNO7JGitlt.png' />
+            <text>邀请好友分任务</text>
+            <button open-type='share' id='BotShareBtn'></button>
+			<button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo2' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+        </view>
+
+    </view>
+
+</view>

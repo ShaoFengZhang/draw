@@ -34,6 +34,7 @@
         <view class='shareActive' bindtap='showposter'>
             <image src='https://tp.datikeji.com/a/15456453865041/Gfgvn3p3pf7VTA5uhFKeowZWLNsanw8xm8PvbnPL.png' />
             <text>邀请好友参加</text>
+			<button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo2' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
         </view>
     </view>
 

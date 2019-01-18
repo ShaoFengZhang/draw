@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -71,7 +71,37 @@
 				{
 					"id": -1,
 					"name": "骰子",
-					"pathName": "pages/RollTheDice/RollTheDice"
+					"pathName": "pages/RollTheDice/RollTheDice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "做选择用户结果",
+					"pathName": "pages/userSelectResult/userSelectResult",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分任务",
+					"pathName": "pages/pointsTask/pointsTask",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "等待分任务",
+					"pathName": "pages/waitPointsTask/waitPointsTask",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "海报",
+					"pathName": "pages/nowActive/nowActive",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "名片页面",
+					"pathName": "pages/myQrCode/myQrCode"
 				}
 			]
 		}

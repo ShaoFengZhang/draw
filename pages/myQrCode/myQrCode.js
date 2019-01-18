@@ -4,7 +4,8 @@ import wxAPIF from '../../utils/wxApiFun.js';
 Page({
 
     data: {
-		ifShowServiceMask:false,
+		promptIsShow:false,
+		ifAddGuide:false,
     },
 
     onLoad: function(options) {
@@ -12,6 +13,7 @@ Page({
         console.log(this.qrcodeImg);
 		this.setData({
 			qrcodeImg: this.qrcodeImg,
+			ifShowAddMyPro: wx.getStorageSync("showAdd")?false: true,
 		})
     },
 
@@ -31,10 +33,10 @@ Page({
         }
     },
 
-	//ifShowServiceMask
-	ifShowServiceMask:function(){
+	//promptIsShow
+	ifShowPrompt:function(){
 		this.setData({
-			ifShowServiceMask: !this.data.ifShowServiceMask,
+			promptIsShow: !this.data.promptIsShow,
 		})
 	},
 
@@ -147,6 +149,20 @@ Page({
 					urls: [res.tempFilePath]
 				})
 			}
+		})
+	},
+
+	closeAddMyPro:function(){
+		wx.setStorageSync('showAdd', true);
+		this.setData({
+			ifShowAddMyPro: false,
+		})
+	},
+
+	showAddMyPro:function(){
+		wx.setStorageSync('showAdd', true);
+		this.setData({
+			ifAddGuide: !this.data.ifAddGuide,
 		})
 	},
 })

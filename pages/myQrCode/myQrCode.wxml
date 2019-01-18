@@ -30,8 +30,9 @@
 
         </view>
 
+        <!-- 底部两个按钮 -->
         <view class='botBtnBox'>
-            <view bindtap='ifShowServiceMask'>
+            <view catchtap='ifShowPrompt'>
                 <image src='https://tp.datikeji.com/a/15459929372260/oZDCbkWbvw0gDOrLjK6FSi81AM9AijpdByBkG7Gk.png' />
                 <text>联系客服</text>
                 <!-- <button id='contact' open-type='contact'></button> -->
@@ -43,20 +44,44 @@
             </view>
         </view>
 
+        <!-- 客服弹窗 -->
+        <view class='promptMask' wx:if="{{promptIsShow}}">
 
-        <view class='serviceMask' wx:if="{{ifShowServiceMask}}" bindtap='ifShowServiceMask'>
-            <view class='MaskBody'>
-                <image src='/assets/point.png' />
-                <view class='maskPromtTxt'>提示</view>
-                <view class='txtDetil'>
+            <view class="maskBody">
+
+                <view class='bodyIcon'>
+                    <image src='https://tp.datikeji.com/a/15470988515560/YbJ4rHhy9CQlPTXrguLRgO2Ua916XaDYf6if05rP.png' />
+                </view>
+
+                <view class='MaskContent'>
                     <view>如果您需要客服的帮助</view>
                     <view>请在接下来的页面留言</view>
                 </view>
-                <button id='customerBtn' open-type="contact">立即留言</button>
+
+                <view class='MaskShareBtn' catchtap='ifShowPrompt'>
+                    <text>立即留言</text>
+                    <button id='maskShare' open-type="contact"></button>
+                </view>
+
+                <view class='closeBtn' catchtap='ifShowPrompt'>
+                    <image src='/assets/close.png'></image>
+                </view>
+
             </view>
+
         </view>
 
     </view>
+
+    <view class='AddmyPro normalView' catchtap='showAddMyPro' wx:if="{{ifShowAddMyPro}}">
+        <text>添加到我的小程序 </text>
+        <text catchtap='closeAddMyPro' class='closeAddMyPro' style='font-size:34rpx;'> x</text>
+    </view>
+
+	<!-- 收藏引导 -->
+	<view class='AddGuide' wx:if="{{ifAddGuide}}" catchtap='showAddMyPro'>
+		<image mode='aspectFit' src='https://tp.datikeji.com/a/15477942001244/E0ZEVQNK0zOVdqTBPw8zpkBUINF2Srki1gdvPtzJ.png' />
+	</view>
 </view>
 
 <canvas canvas-id="canvas" style="width:{{bgimgW}}px;height:{{bgimgH}}px;display:block;position:absolute; bottom:1500px" />

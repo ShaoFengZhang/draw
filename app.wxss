@@ -87,6 +87,7 @@ button::after {
     position: absolute;
     top: 0;
     left: 0;
+	z-index: 9999;
 }
 
 .maskBody {
@@ -132,6 +133,15 @@ button::after {
     position: relative;
 }
 
+#maskShare{
+	width:100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+
 .closeBtn,.closeBtn image{
 	width: 58rpx;
 	height: 58rpx;
@@ -141,4 +151,69 @@ button::after {
 	position: absolute;
 	top: -78rpx;
 	right: 0;
+}
+
+/* 底部提示文字 */
+
+.botPrompt {
+    color: #9d9d9d;
+    font-size: 22rpx;
+    margin-top: 24rpx;
+    padding-bottom: 30rpx;
+}
+
+/* 海报弹窗 */
+
+.postersMask {
+    width: 100%;
+    height: 100vh;
+    background: rgba(51, 51, 51, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.posterBody {
+    width: 750rpx;
+    height: 344rpx;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+	font-size: 30rpx;
+}
+
+.posterBody image{
+	width: 38rpx;
+	height: 38rpx;
+	vertical-align: middle;
+	margin-right: 20rpx;
+}
+
+.invitFriend, .invitPic {
+    width: 100%;
+    height: 118rpx;
+    box-sizing: border-box;
+	text-align: center;
+	line-height: 118rpx;
+	color: #333333;
+	position: relative;
+}
+
+.invitFriend {
+    border-bottom: 2rpx solid #e8e8e8;
+}
+
+.invitLine {
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(243, 243, 243, 1);
+}
+
+.invitCancel{
+	width: 100%;
+	height: 88rpx;
+	color: #9D9D9D;
+	line-height: 88rpx;
+	text-align: center;
 }

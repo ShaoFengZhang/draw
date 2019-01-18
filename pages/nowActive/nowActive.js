@@ -4,12 +4,22 @@ import wxAPIF from '../../utils/wxApiFun.js';
 Page({
 
     data: {
-		temaIcon: "https://tp.datikeji.com/a/15459826773637/oGLjACxLNxthJdZzoOngQwHqNY3xO50B64Z9Ou1T.png",
+		ifDomin:1,
+        drawTemaIcon: "https://tp.datikeji.com/a/15459826773637/oGLjACxLNxthJdZzoOngQwHqNY3xO50B64Z9Ou1T.png",
+        selectTeamIcon: "https://tp.datikeji.com/a/15475373102609/Mz09YJVjTVisdF20EfWakgwPq7fVfDEfo4ZSmebJ.png",
     },
 
     onLoad: function(options) {
-        this.qrcodeImg = wxAPIF.domin + `get_qrcode?page=pages/overTheCard/overTheCard&scene=${options.actId}@${wx.getStorageSync('u_id')}`;
-        console.log(this.qrcodeImg);
+
+        if (options && options.navtype == "draw") {
+            this.qrcodeImg = wxAPIF.domin + `get_qrcode?page=pages/overTheCard/overTheCard&scene=${options.actId}@${wx.getStorageSync('u_id')}`;
+			this.temaIcon = this.data.drawTemaIcon;
+			this.navtype=options.navtype;
+        } else if (options && options.navtype == "select") {
+			this.qrcodeImg = wxAPIF.domin + `get_qrcode?page=pages/index/index&scene=${options.actId}@${wx.getStorageSync('u_id')}`;
+			this.temaIcon = this.data.selectTeamIcon;
+			this.navtype = options.navtype;
+        }
 
         this.setData({
             name: app.globalData.userInfo.nickName.slice(0, 5),
@@ -17,7 +27,10 @@ Page({
             title: options.title,
             actId: options.actId,
             qrIcon: this.qrcodeImg,
+			temaIcon: this.temaIcon,
         });
+
+        console.log(this.qrcodeImg)
     },
 
     onShow: function() {
@@ -26,16 +39,23 @@ Page({
 
     // 分享
     onShareAppMessage: function(e) {
-		console.log(e);
-		let title = `${this.data.title}咱们抽签决定吧！`;
-		let img = app.globalData.invitFriendIcon;
-		let path = `/pages/overTheCard/overTheCard?actId=${this.data.actId}&title=${this.data.title}&userId=${wx.getStorageSync('u_id')}`;
-		console.log(path);
-		return {
-			title: title,
-			path: path,
-			imageUrl: img,
+        console.log(e);
+		if (this.navtype =='draw'){
+			var path = `/pages/overTheCard/overTheCard?actId=${this.data.actId}&title=${this.data.title}&userId=${wx.getStorageSync('u_id')}`;
+			var title = `${this.data.title} 咱们抽签决定吧！`;
+			var img = app.globalData.invitFriendIcon;
+		} else if (this.navtype == 'select'){
+			var path = `/pages/index/index?selectId=${this.data.actId}&userId=${wx.getStorageSync('u_id')}`;
+			var title = `我发起了一个大转盘活动，快来参加`;
+			var img = app.globalData.qrSelecticon;
 		}
+        
+        console.log(path);
+        return {
+            title: title,
+            path: path,
+            imageUrl: img,
+        }
     },
 
     // 绘制Canvas
@@ -47,7 +67,7 @@ Page({
         let titleIcon = this.data.temaIcon;
         let avatarUrl = this.data.avatarUrl;
         let teamName = this.data.title;
-        let titleTxt =  '我发起了一个活动';
+        let titleTxt = '我发起了一个活动';
         let teamTxt = "[活动主题]";
         let bottxt = "长按识别小程序，参与活动";
         wx.getImageInfo({
@@ -67,12 +87,13 @@ Page({
                 ctx.setTextAlign('left');
                 ctx.setFillStyle('#333333');
                 ctx.setFontSize(32);
-                if (teamName.length > 11) {
-                    ctx.fillText(teamName.slice(0, 11), 260, 516);
-                    ctx.fillText(teamName.slice(11, 28), 70, 576);
-                } else {
-                    ctx.fillText(teamName, 260, 516);
-                }
+				ctx.fillText(teamName, 260, 516);
+                // if (teamName.length > 11) {
+                //     ctx.fillText(teamName.slice(0, 11), 260, 516);
+                //     ctx.fillText(teamName.slice(11, 28), 70, 576);
+                // } else {
+                //     ctx.fillText(teamName, 260, 516);
+                // }
 
 
                 ctx.setFillStyle('#FFC16F');

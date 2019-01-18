@@ -146,7 +146,7 @@ Page({
 		let actId = e.currentTarget.dataset.release_id;
 		let ifDelete = e.currentTarget.dataset.ifdelete;
 		let navType = e.currentTarget.dataset.navtype;
-		if (ifDelete==2){
+		if (ifDelete==1){
 			util.showToastFun('该活动已删除')
 			return;
 		};
@@ -162,7 +162,13 @@ Page({
 		if (navType == 1) {
 			this.selectClickList(actId);
 		};
-		
+
+		// 等待分任务
+		if (navType == 2) {
+			wx.navigateTo({
+				url: `/pages/waitPointsTask/waitPointsTask?release_id=${actId}&userId=${wx.getStorageSync('u_id')}`,
+			})
+		};
     },
 
 	// 做选择查看事件
@@ -175,15 +181,20 @@ Page({
 			popular_id: id,
 		}, function (res) {
 			wx.hideLoading();
+			if(res.is_end==2){
+				util.showToastFun("该活动已经被删除");
+				return;
+			}
 			if (res.code == 0) {
 				console.log(res);
+				// return;
 				if(res.data==1){
 					wx.navigateTo({
 						url: `/pages/daZhuanPan/daZhuanPan?title=${res.title}&sun=${JSON.stringify(res.select_content.split("`||"))}&SType=${2}&selectId=${id}`,
 					})
 				}else{
 					wx.navigateTo({
-						url: `/pages/selectionResult /selectionResult?s_awards=${res.data.content}&title=${res.data.title}&userId=${wx.getStorageSync('u_id')}`,
+						url: `/pages/selectionResult /selectionResult?s_awards=${res.data.content}&title=${res.data.title}&userId=${wx.getStorageSync('u_id')}&selectId=${id}`,
 					});
 				}
 			}else{

@@ -1,0 +1,8 @@
+{
+	"navigationBarBackgroundColor": "#FFB554",
+	"navigationBarTitleText": "朋友的选择",
+	"navigationBarTextStyle": "white",
+	"backgroundColor": "#F2F2F2",
+	"enablePullDownRefresh":true,
+	"disableScroll": true
+}

@@ -183,6 +183,10 @@ input.numinput {
     opacity: 0;
 }
 
+.promptMask{
+	z-index: 9999;
+}
+
 .mark{
 	 animation: mark 1.5s ease-in-out infinite;
 }

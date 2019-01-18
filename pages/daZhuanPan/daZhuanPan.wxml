@@ -33,9 +33,18 @@
 
         </view>
 
-        <view class='startBtn normalView' catchtap='{{goGame}}'>
-            <text>点击开始</text>
-            <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfoBot' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+        <view class="botBtnBox">
+
+		<view class='voideBtn'>
+				<image wx:if="{{musicflg}}" catchtap='voideSwitch' src='https://tp.datikeji.com/a/15476072839758/wftcLTMDlTRg7Wt28UAmK9D5GIjDzmxsYYkdXCyq.png' />
+				<image wx:if="{{!musicflg}}"catchtap="voideSwitch" src='https://tp.datikeji.com/a/15476073055864/ocCnGyAsAaSkFCXXKrnvov6e6D40xHVHOEnOMxQb.png' />
+			</view>
+
+            <view class='startBtn normalView' catchtap='{{goGame}}'>
+                <text>点击开始</text>
+                <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfoBot' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+            </view>
+
         </view>
 
         <view class='goGameBtn' catchtap='{{goGame}}'>

@@ -10,9 +10,10 @@
             {{s_awards}}
         </view>
 
-        <view class='promptTxt' catchtap='ifShowPrompt'>
+        <view class='promptTxt' catchtap='gotoResult'>
             <text>看看其他人会选到什么>></text>
-            <image class='breath' style='width:34rpx;height:34rpx;' src='https://tp.datikeji.com/a/15465738838115/307BT6KvLPKJdZivK6YsDkaft0rFIjfFhzJPSQTH.png' />
+            <image class='breath' style='width:34rpx;height:34rpx;' catchtap='ifShowPrompt'  src='https://tp.datikeji.com/a/15465738838115/307BT6KvLPKJdZivK6YsDkaft0rFIjfFhzJPSQTH.png' />
+			<button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo1' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
         </view>
 
     </view>
@@ -29,10 +30,10 @@
             <text>更多活动</text>
         </view>
 
-        <view class='shareBtn'>
+        <view class='shareBtn' catchtap='posterClick'>
             <image src='https://tp.datikeji.com/a/15470944085697/Zj7sv1gILYHPVOxTqNnaDPMeaNl5aqGNO7JGitlt.png' />
             <text>邀请好友</text>
-            <button id='botShare' open-type='share'></button>
+            <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo2' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
         </view>
 
     </view>
@@ -46,13 +47,11 @@
             </view>
 
             <view class='MaskContent'>
-                <!-- <text>邀请好友参与后就可以看到好友的选择，好友参与后每人的记录只会保留第一条。</text> -->
-                <text>功能拼命内测中，即将发布！</text>
-
+                <text>邀请好友参与后就可以看到好友的选择，请注意：好友参与后每人的记录只会保留第一条。</text>
             </view>
 
             <view class='MaskShareBtn' catchtap='ifShowPrompt'>
-                <text>推荐给好友</text>
+                <text>邀请好友</text>
                 <button id='maskShare' open-type='share'></button>
             </view>
 
@@ -62,6 +61,22 @@
 
         </view>
 
+    </view>
+
+	<view class='postersMask' wx:if="{{ifShowPoster}}" bindtap='posterClick'>
+        <view class='posterBody'>
+            <view class='invitFriend' hover-class='hover-class'>
+                <image src='https://tp.datikeji.com/a/15458994124532/ryULAfJZhlZ0w02Oep3qIOVGBlV35FIBDeI2N8gZ.png' />
+				<text>邀请微信好友</text>
+				<button id='shareBtn' open-type='share'></button>
+            </view>
+            <view class='invitPic' bindtap='goToNowActive' hover-class='hover-class'>
+                <image src='https://tp.datikeji.com/a/15459004323032/JREHmIfuaa3pbgcsevwjde5jfcxBzxRZ8hMWpAR0.png' />
+				<text>生成邀请图</text>
+            </view>
+            <view class='invitLine'></view>
+            <view class='invitCancel' hover-class='hover-class'>取消</view>
+        </view>
     </view>
 
 </view>

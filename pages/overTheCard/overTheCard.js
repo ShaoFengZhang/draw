@@ -103,9 +103,14 @@ Page({
             let encryptedData = e.detail.encryptedData;
             let session_key = app.globalData.session_key;
             wxAPIF.checkUserInfo(app, e.detail, iv, encryptedData, session_key);
-            this.drawClickFun();
+			if (btnID =="getInfo"){
+				this.drawClickFun();
+			}else{
+				this.showposter();
+			}
+            
         } else {
-            util.showToastFun('抽签必须授权哦~');
+            util.showToastFun('需要授权哦亲~');
         }
     },
 
@@ -274,7 +279,7 @@ Page({
     // 跳转海报页面
     goToNowActive: function() {
         wx.navigateTo({
-            url: `/pages/nowActive/nowActive?actId=${this.data.actId}&title=${this.data.title}`,
+            url: `/pages/nowActive/nowActive?actId=${this.data.actId}&title=${this.data.title}&navtype=draw`,
         })
     },
 
@@ -308,5 +313,7 @@ Page({
 
 		});
 	},
+
+	catchtap:function(){},
 
 })

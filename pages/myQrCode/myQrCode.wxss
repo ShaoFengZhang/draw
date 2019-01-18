@@ -126,25 +126,25 @@
     background: rgba(255, 255, 255, 1);
     box-shadow: -4rpx 9rpx 20rpx 0px rgba(217, 128, 0, 0.32);
     border-radius: 44rpx;
-	position: relative;
+    position: relative;
 }
 
-.botBtnBox image,.saveBtn image{
-	width: 30rpx;
-	height: 30rpx;
-	vertical-align: middle;
-	margin-right: 20rpx;
+.botBtnBox image, .saveBtn image {
+    width: 30rpx;
+    height: 30rpx;
+    vertical-align: middle;
+    margin-right: 20rpx;
 }
 
-#contact{
-	width: 320rpx;
+#contact {
+    width: 320rpx;
     height: 88rpx;
-	padding: 0;
-	margin: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 /* 弹窗 */
@@ -187,8 +187,8 @@
 }
 
 .txtDetil {
-	padding: 0 74rpx;
-	box-sizing: border-box;
+    padding: 0 74rpx;
+    box-sizing: border-box;
     text-align: center;
     font-size: 34rpx;
     line-height: 72rpx;
@@ -203,4 +203,48 @@
     font-size: 30rpx;
     color: rgba(255, 255, 255, 1);
     line-height: 68rpx;
+}
+
+.MaskContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/* 收藏到我的小程序 */
+
+.AddmyPro {
+    width: 134px;
+    height: 28px;
+    color: #ffc268;
+    font-size: 12px;
+    background-image: url("https://tp.datikeji.com/a/15477918104873/6F4c5AzvqfwI14FfKp4msnCy950zYJo1Rox3yvQP.png");
+    position: absolute;
+    top: 0;
+    right: 15px;
+    line-height: 31px;
+}
+
+.closeAddMyPro {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+
+.AddGuide {
+    width: 100%;
+    height: 100vh;
+    background:rgba(51,51,51,0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.AddGuide image{
+	width: 532rpx;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 116rpx;
 }

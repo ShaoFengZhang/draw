@@ -7,7 +7,8 @@
                 <image src='{{avatarUrl}}' />
             </view>
 
-            <text>{{name}}发起了一个活动</text>
+            <text wx:if="{{ifDomin}}">{{name}}发起了一个活动</text>
+            <text wx:if="{{!ifDomin}}">{{name}}参加了一个活动</text>
         </view>
 
         <view class='temaIcon'>

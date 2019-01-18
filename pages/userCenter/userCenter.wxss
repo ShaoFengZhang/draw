@@ -238,15 +238,6 @@
     margin: 0 auto;
 }
 
-/* 底部提示文字 */
-
-.botPrompt {
-    color: #9d9d9d;
-    font-size: 22rpx;
-    margin-top: 24rpx;
-    padding-bottom: 30rpx;
-}
-
 /* 删除梦层 */
 
 .postersMask {

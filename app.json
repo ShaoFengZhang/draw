@@ -11,7 +11,10 @@
 		"pages/SelectTemplate/SelectTemplate",
 		"pages/createSelect/createSelect",
 		"pages/daZhuanPan/daZhuanPan",
-		"pages/selectionResult /selectionResult"
+		"pages/selectionResult /selectionResult",
+		"pages/userSelectResult/userSelectResult",
+		"pages/pointsTask/pointsTask",
+		"pages/waitPointsTask/waitPointsTask"
 	],
 	"window": {
 		"backgroundTextStyle": "light",

@@ -9,6 +9,7 @@ Page({
         selectPlayerNum: 1,
         inputValue: "",
         category: 0,
+		promptIsShow:0,
     },
 
     onLoad: function(options) {
@@ -71,12 +72,10 @@ Page({
     //catchtap
     catchtap: function() {},
 
-    showModel: function() {
-        wx.showModal({
-            title: '提示',
-            content: '打开此项，好友必须先参与抽签后才可以查看抽签结果，请您悉知！',
-            showCancel: false,
-        })
+	ifShowPrompt: function() {
+        this.setData({
+			promptIsShow: !this.data.promptIsShow,
+		})
     },
 
     // 获取用户信息

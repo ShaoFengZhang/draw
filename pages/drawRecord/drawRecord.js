@@ -55,7 +55,7 @@ Page({
             url: '/pages/index/index',
         });
     },
-
+	
     // 查看抽签的数据
     getDrawtData: function() {
 		util.showLoadfun('加载中');

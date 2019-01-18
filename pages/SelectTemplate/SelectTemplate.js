@@ -25,10 +25,12 @@ Page({
     // 分享
     onShareAppMessage: function() {
 		let title = "真心话还是大冒险？别纠结了，一局转盘做决定！";
-		let path = `/pages/index/index?userId=${wx.getStorageSync('u_id')}`;
+		let path = `/pages/index/index?userId=${wx.getStorageSync('u_id')}&navType=selectTemp`;
+		let img = app.globalData.selectListIcon;
         return {
             title: title,
             path: path,
+			imageUrl:img,
         }
     },
 
@@ -90,7 +92,6 @@ Page({
 			this.selectClickList(this.data.itemList[num].id, title, this.zhuanpanArr)
         };
 
-       
     },
 
     // goToCreateSelect

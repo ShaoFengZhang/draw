@@ -1,0 +1,57 @@
+<view class="bg">
+
+    <view class='topView'>
+        <view class='selectTheme'>
+            <text style='font-size:38rpx;font-weight:bold;margin-right:18rpx;'>[主题]</text>
+            <text style='font-size:32rpx;'>{{title}}</text>
+        </view>
+    </view>
+
+    <view class='mySelectResult'>
+        <view class='mySelectTxt'>
+            <image src='https://tp.datikeji.com/a/15474555217429/2vpHyFKUy7h1EodhwXN5521X7LPOJCy4jQSfamIG.png' />
+            <text>我本人选择</text>
+        </view>
+        <view class='userInfo'>
+            <view>
+                <image src="{{myIcon}}"/>
+            </view>
+            <view class='username'>{{myName}}</view>
+            <view class='useranswer'>{{mySelect}}</view>
+
+        </view>
+    </view>
+
+    <view class='friendSelectTxt'>
+        <image src='https://tp.datikeji.com/a/15474555217429/2vpHyFKUy7h1EodhwXN5521X7LPOJCy4jQSfamIG.png' />
+        <text>朋友的选择</text>
+    </view>
+
+    <view class='scrollBox' style='height:{{scrollHeight}}rpx'>
+        <scroll-view scroll-y style="height:{{scrollHeight}}rpx;">
+
+            <view class='friendListItem' wx:for="{{friendList}}" wx:key="{{index}}" wx:if="{{friendList.length}}">
+                <view class='userInfo'>
+                    <view>
+                        <image src='{{item.pic}}' />
+                    </view>
+                    <view class='username'>{{item.userName}}</view>
+                    <view class='useranswer friendAnswer'>{{item.content}}</view>
+
+                </view>
+            </view>
+
+            <view class='botPrompt texalCen' wx:if="{{!friendList.length && ifShowView}}">暂时还没有数据哦~</view>
+
+        </scroll-view>
+    </view>
+
+    <view class='botBtnBox normalView'>
+        <view class='newActive'>新建选择</view>
+        <view class='shareBox'>
+            <image src='https://tp.datikeji.com/a/15470944085697/Zj7sv1gILYHPVOxTqNnaDPMeaNl5aqGNO7JGitlt.png' />
+            <text>分享活动</text>
+			<button id='shareBtn' open-type='share'></button>
+        </view>
+    </view>
+</view>

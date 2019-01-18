@@ -1,0 +1,94 @@
+<view calss="bg">
+
+    <view class='topImgBox'>
+        <image src='https://tp.datikeji.com/a/15459826773637/oGLjACxLNxthJdZzoOngQwHqNY3xO50B64Z9Ou1T.png' />
+    </view>
+
+    <view class='textDes'>
+        <text class='texalCen' style='color:#FFF;font-size:24rpx;'>抽签</text>
+        <text style='color:#333;font-size:30rpx;'>输入任务名称并选择执行人数，发布任务后邀请好友参加，系统会给每个参与的朋友分派任务。</text>
+    </view>
+
+    <view class='taskList' style='height:{{scrollHeight}}rpx'>
+
+        <scroll-view scroll-y style='height:{{scrollHeight}}rpx' scroll-into-view="{{scrollId}}">
+
+            <view class='taskTheme'>
+                <text class='taskThemeTxt'>任务主题</text>
+                <input class='themeInput' maxlength='18' placeholder="请输入任务主题" placeholder-class="placeClass" bindinput="themeBindinput"></input>
+            </view>
+
+            <view class='taskItemBox' wx:for="{{taskItemArr}}" wx:key="{{index}}">
+
+                <view class='ItemTop'>
+                    <image catchtap='minsItemArr' data-number="{{index}}" src='https://tp.datikeji.com/a/15469193186271/ZBIjVkwbTkBW9bbHFdmQVm9DjLgjy8rp0nRqcL9T.png' />
+                    <text style='color:#D0D0D0;font-size:30rpx;margin-right:30rpx;'>任务安排</text>
+
+                    <input class='themeInput' data-number="{{index}}" maxlength='18' placeholder="请输入任务安排" value='{{item.title}}' placeholder-class="placeClass" bindinput="itemBindinput"></input>
+                </view>
+
+                <view class='line'></view>
+
+                <view class='ItemBot'>
+
+                    <text style='color:#D0D0D0;font-size:30rpx;margin-right:30rpx;'>执行人数</text>
+
+                    <view class='iconView' catchtap='peopleMins' data-number="{{index}}">
+                        <image src='https://tp.datikeji.com/a/15458922779922/aSgKfuZVqRiDqtbbiHMJumrwLdebvXDHd2gnRkqV.png' />
+                    </view>
+
+                    <input class='itemInput' data-number="{{index}}" type='number' value='{{item.num}}' placeholder="请输入执行人数" placeholder-class="placeClass" maxlength='2' bindinput="peopleNumInput"></input>
+
+                    <view class='iconView' catchtap='peopleAdd' data-number="{{index}}">
+                        <image src='https://tp.datikeji.com/a/15458923303259/j2LKJ1rTNQSToynGnj9QMHfLn0OkcpLhkUyIUHbn.png' />
+                    </view>
+
+                </view>
+            </view>
+
+            <view class='additemBox' catchtap='addItemArr' id='scroll{{taskItemArr.length}}'>
+                <image src='https://tp.datikeji.com/a/15469198683282/8ETqYWaXFR35OwK0CKaa2uzBuP8MzygMIjFreOnR.png' />
+
+                <view style=' width:138rpx;color:#FFB554;font-size:30rpx;text-align:left;'>添加选项</view>
+
+                <view style=' width:258rpx;color:#D4D4D4;font-size:30rpx;text-align:left;'>（最多添加10个）</view>
+            </view>
+
+        </scroll-view>
+
+
+    </view>
+
+
+    <!-- 底部发起抽签按钮 -->
+    <view class='drawBtnBox' bindtap='creatOneTask'>
+        <text>发起任务</text>
+        <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
+    </view>
+
+    <!-- 提示框 -->
+    <view class='promptMask' wx:if="{{promptIsShow}}">
+
+        <view class="maskBody">
+
+            <view class='bodyIcon'>
+                <image src='https://tp.datikeji.com/a/15470988515560/YbJ4rHhy9CQlPTXrguLRgO2Ua916XaDYf6if05rP.png' />
+            </view>
+
+            <view class='MaskContent'>
+                <text>确定删除已添加的内容么？ 当前操作无法撤销</text>
+            </view>
+
+            <view class='MaskShareBtn' catchtap='determine'>
+                <text>确定</text>
+            </view>
+
+            <view class='closeBtn' catchtap='ifShowPrompt'>
+                <image src='/assets/close.png'></image>
+            </view>
+
+        </view>
+
+    </view>
+
+</view>

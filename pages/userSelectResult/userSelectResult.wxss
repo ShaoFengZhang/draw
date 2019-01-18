@@ -1,0 +1,165 @@
+.topView {
+    width: 100%;
+    height: 190rpx;
+    background: rgba(255, 181, 84, 1);
+    color: #fff;
+    overflow: hidden;
+}
+
+.selectTheme {
+    width: 100%;
+    height: 50rpx;
+    box-sizing: border-box;
+    padding: 0 24rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 30rpx;
+}
+
+.mySelectResult {
+    width: 702rpx;
+    height: 206rpx;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 20rpx 0px rgba(168, 168, 168, 0.2);
+    border-radius: 8rpx;
+    margin: -86rpx auto 0;
+    box-sizing: border-box;
+    padding: 0 30rpx;
+}
+
+.mySelectTxt, .friendSelectTxt {
+    width: 100%;
+    height: 86rpx;
+    line-height: 86rpx;
+    color: #333;
+    font-size: 30rpx;
+}
+
+.mySelectTxt image, .friendSelectTxt image {
+    width: 6rpx;
+    height: 10rpx;
+    vertical-align: middle;
+    margin-right: 28rpx;
+}
+
+.userInfo {
+    width: 100%;
+    height: 120rpx;
+    font-size: 26rpx;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.userInfo image {
+    width: 78rpx;
+    height: 78rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+}
+
+.username {
+    width: 138rpx;
+    height: 120rpx;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 120rpx;
+    margin-right: 10rpx;
+}
+
+.useranswer {
+    width: 386rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    border-radius: 8rpx;
+    background-size: 386rpx 44rpx;
+    background-repeat: no-repeat;
+    background-image: url("https://tp.datikeji.com/a/15474597147121/0tiQEaox98FX2ihl60UEGpQZS15IekJu13TA2dcp.png");
+    box-sizing: border-box;
+    padding: 0rpx 22rpx 0rpx 30rpx;
+    color: #fff;
+    font-size: 26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.friendAnswer {
+    color: #ffc16f;
+    background-image: url("https://tp.datikeji.com/a/15474620998370/OaaPksCjxrIpvLnWafvwimYVMzPp9aAZQot4ivFR.png");
+}
+
+.friendSelectTxt {
+    box-sizing: border-box;
+    padding: 0 55rpx;
+    margin-top: 12rpx;
+}
+
+.scrollBox {
+    width: 100%;
+    height: 596rpx;
+    /* background-color: gray; */
+    box-sizing: border-box;
+    padding: 0 55rpx;
+}
+
+.friendListItem {
+    width: 100%;
+    height: 120rpx;
+    box-sizing: border-box;
+    border-bottom: 2rpx solid #e8e8e8;
+}
+
+.botBtnBox {
+    width: 100%;
+    height: 88rpx;
+    box-sizing: border-box;
+    padding: 0 26rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 78rpx auto 0;
+}
+
+.botBtnBox view {
+    width: 338rpx;
+    height: 88rpx;
+    font-size: 30rpx;
+    box-sizing: border-box;
+    line-height: 88rpx;
+}
+
+.newActive {
+    border: 2rpx solid rgba(255, 193, 111, 1);
+    border-radius: 44rpx;
+    color: #ffb554;
+}
+
+.shareBox {
+    background: rgba(255, 181, 84, 1);
+    box-shadow: 0px 2rpx 20rpx 0px rgba(255, 181, 84, 0.68);
+    border-radius: 44rpx;
+    color: #fff;
+    position: relative;
+}
+
+.shareBox image {
+    width: 28rpx;
+    height: 30rpx;
+    vertical-align: middle;
+    margin-right: 12rpx;
+}
+
+#shareBtn {
+    width: 338rpx;
+    height: 88rpx;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 44rpx;
+	opacity: 0;
+}

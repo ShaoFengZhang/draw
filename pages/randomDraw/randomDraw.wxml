@@ -16,7 +16,7 @@
             <input class='textinput' maxlength="40" bindinput="bindinput" value="{{inputValue}}" placeholder="今天谁发红包?" placeholder-class="placeInput"></input>
         </view>
 
-		<view class='line'></view>
+        <view class='line'></view>
 
         <view class='playDraw playuserNum'>
             <text class='textTitle2' style='color:#D0D0D0;font-size:30rpx;'>参与人数</text>
@@ -25,7 +25,7 @@
             <text bindtap='playerNumAdd' class=' minusIcon normalView addicon'></text>
         </view>
 
-		<view class='line'></view>
+        <view class='line'></view>
 
         <view class='selectDraw playuserNum'>
             <text class='textTitle3' style='color:#D0D0D0;font-size:30rpx;'>选中人数</text>
@@ -39,7 +39,7 @@
     <!-- 底部满人数选择按钮 -->
     <view class='drawIdeaGlob playuserNum'>
         <text class='textTitle' style='color:#9D9D9D;font-size:26rpx;'>参与者先抽签才可以查看结果</text>
-		<image class='breath' style='width:34rpx;height:34rpx;margin-right:136rpx;' catchtap='showModel' src='https://tp.datikeji.com/a/15465738838115/307BT6KvLPKJdZivK6YsDkaft0rFIjfFhzJPSQTH.png' />
+        <image class='breath' style='width:34rpx;height:34rpx;margin-right:136rpx;' catchtap='ifShowPrompt' src='https://tp.datikeji.com/a/15465738838115/307BT6KvLPKJdZivK6YsDkaft0rFIjfFhzJPSQTH.png' />
         <switch color="#FFC16F" bindchange="switch1Change" />
     </view>
 
@@ -49,4 +49,28 @@
         <button catchtap='catchtap' wx:if="{{!hasUserInfo && canIUse}}" lang='zh_CN' id='getInfo' open-type='getUserInfo' bindgetuserinfo="getUserInfo"></button>
     </view>
 
+    <!-- 提示弹窗 -->
+    <view class='promptMask' wx:if="{{promptIsShow}}">
+
+        <view class="maskBody">
+
+            <view class='bodyIcon'>
+                <image src='https://tp.datikeji.com/a/15470988515560/YbJ4rHhy9CQlPTXrguLRgO2Ua916XaDYf6if05rP.png' />
+            </view>
+
+            <view class='MaskContent'>
+                <text>打开此项，您邀请的好友必须先参与抽签，成功参与后才可以查看抽签结果，请您悉知！</text>
+            </view>
+
+            <view class='MaskShareBtn' catchtap='ifShowPrompt'>
+                <text>我知道了</text>
+            </view>
+
+            <view class='closeBtn' catchtap='ifShowPrompt'>
+                <image src='/assets/close.png'></image>
+            </view>
+
+        </view>
+
+    </view>
 </view>

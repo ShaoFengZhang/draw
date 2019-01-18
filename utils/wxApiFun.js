@@ -21,9 +21,37 @@ const wxloginfnc = (app) => {
 					wx.setStorageSync('u_id', value.data.u_id);
                     app.globalData.session_key = value.data.session_key;
                     getSettingfnc(app);
-					if (app.getDataFun) {
+
+					// 首页获取模板
+					if (app.getDataFun && app.ifPerformGetDataFun) {
+						app.ifPerformGetDataFun=false;
 						app.getDataFun();
 					};
+
+					// 跳转选择模板Page
+					if (app.navToSelectTemp && app.ifPerformNavToSelectTemp){
+						app.ifPerformNavToSelectTemp=false;
+						app.navToSelectTemp();
+					};
+
+					// 跳转大转盘Page
+					if (app.navToDaZhuanPan && app.ifPerformNavToDaZhuanPan) {
+						app.ifPerformNavToDaZhuanPan = false;
+						app.navToDaZhuanPan();
+					};
+
+					// 跳转等待分任务Page
+					if (app.navToWaitTask && app.ifPerformNavToWaitTask) {
+						app.ifPerformNavToWaitTask = false;
+						app.navToWaitTask();
+					};
+
+					// 跳转创建分任务Page
+					if (app.navToPointsPage && app.ifPerformNavToPointsPage) {
+						app.ifPerformNavToPointsPage = false;
+						app.navToPointsPage();
+					};
+
                 }
             });
         },

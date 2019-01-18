@@ -32,7 +32,7 @@
 
     <scroll-view class='scrollView' scroll-y="{{isScroll}}" style="height: {{scrollHeight}}rpx;">
 
-        <view class='scrollViewItemBox' wx:if="{{typeWay==1? (item.is_end!=2 && item.is_end!=3):(item.status!=1)}}" data-index='{{index}}' data-navType='{{item.type}}' bindtap='goToItemContent' data-ifDelete='{{item.is_end}}' data-release_id='{{typeWay==1?item.id:item.release_id}}' data-title='{{item.title}}' wx:for="{{ItemArr}}"
+        <view class='scrollViewItemBox' wx:if="{{typeWay==1? (item.is_end!=2 && item.is_end!=3):(item.status!=1)}}" data-index='{{index}}' data-navType='{{item.type}}' bindtap='goToItemContent' data-ifDelete='{{item.status}}' data-release_id='{{typeWay==1?item.id:item.release_id}}' data-title='{{item.title}}' wx:for="{{ItemArr}}"
             wx:key="{{index}}" bindtouchstart="{{drawStart}}" bindtouchmove="{{drawMove}}">
 
             <view class='activityItem bosborder' hover-class="hover-class" style='transform: translateX({{item.transX}}rpx)'>
@@ -50,6 +50,7 @@
                     <view class='itemDesTitle'>
                         <text wx:if="{{item.type==0}}" style='color:#fff;font-size:24rpx;'>抽签</text>
                         <text wx:if="{{item.type==1}}" style='color:#fff;font-size:24rpx;'>做选择</text>
+                        <text wx:if="{{item.type==2}}" style='color:#fff;font-size:24rpx;'>分任务</text>
                         <text style='color:#333;font-size:30rpx;'>{{item.title}}</text>
                     </view>
 
